@@ -1,0 +1,42 @@
+{
+  "name": "giamgiaroi.vn",
+  "version": "0.0.1",
+  "manifest_version": 2,
+  "description": "Theo dõi giảm giá trên các trang amazon, ebay...",
+  "homepage_url": "http://giamgiaroi.vn",
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "web_accessible_resources":["icons/*.png","src/html/*.*"],
+  "default_locale": "vi",
+  "permissions" : ["storage", "activeTab", "tabs"],
+  "browser_action": {
+    "default_icon": "icons/icon19.png",
+    "default_title": "giamgiaroi.vn",
+    "default_popup": "src/browser_action/browser_action.html"
+  },
+  "background":{
+    "scripts":[
+      "js/bower_components/jquery/dist/jquery.min.js",
+      "js/bower_components/ddp.js/src/ddp.js",
+      "js/bower_components/q/q.js",
+      "background.js"
+    ],
+    "persistent": false
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "http://*/*"
+      ],
+      "css":["js/bower_components/pure/pure-min.css","src/inject/ggr_extension.css"],
+      "js": [
+        "js/bower_components/jquery/dist/jquery.min.js",
+        "js/bower_components/q/q.js",
+        "src/inject/inject.js"
+      ]
+    }
+  ]
+}

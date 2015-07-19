@@ -1,0 +1,70 @@
+.button-success,
+.button-error,
+.button-warning,
+.button-secondary {
+    color: white;
+    border-radius: 4px;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+}
+
+.button-success {
+    background: rgb(28, 184, 65); /* this is a green */
+}
+
+.button-error {
+    background: rgb(202, 60, 60); /* this is a maroon */
+}
+
+.button-warning {
+    background: rgb(223, 117, 20); /* this is an orange */
+}
+
+.button-secondary {
+    background: rgb(66, 184, 221); /* this is a light blue */
+}
+
+.button-large {
+    font-size: 110%;
+}
+
+
+[data-tooltip] {
+    position: relative;
+}
+
+[data-tooltip]:before,
+[data-tooltip]:after {
+    display: none;
+    position: absolute;
+    top: 0;
+}
+
+[data-tooltip]:before {
+    border-bottom: .6em solid #09f;
+    border-bottom: .6em solid rgba(0,153,255,0.8);
+    border-left: 7px solid transparent;
+    border-right: 7px solid transparent;
+    content: "";
+    left: 20px;
+    margin-top: 1em;
+}
+
+[data-tooltip]:after {
+    background-color: #0099ff;
+    background-color: rgba(0,153,255,0.8);
+    border: 4px solid #0099ff;
+    border: 4px solid rgba(0,153,255,0.8);
+    border-radius: 7px;
+    color: #ffffff;
+    content: attr(data-tooltip-label) ":\A" attr(data-tooltip-message);
+    left: 0;
+    margin-top: 1.5em;
+    padding: 5px 15px;
+    white-space: pre-wrap;
+    width: 100px;
+}
+
+[data-tooltip]:hover:after,
+[data-tooltip]:hover:before {
+    display: block;
+}
