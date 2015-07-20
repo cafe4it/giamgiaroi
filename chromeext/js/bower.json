@@ -1,0 +1,28 @@
+{
+  "name": "giamgiaroi.vn",
+  "version": "0.0.0",
+  "homepage": "https://github.com/cafe4it/giamgiaroi",
+  "authors": [
+    "Nguyen Xuan Cong <nguyenxuancong@outlook.com>"
+  ],
+  "description": "Theo doi giam gia tren amazon, ebay...",
+  "moduleType": [
+    "node"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "asteroid": "~0.6.1",
+    "css-modal": "~1.4.1",
+    "dustjs-linkedin": "~2.7.2",
+    "jquery": "~2.1.4",
+    "lodash": "~3.10.0",
+    "bootstrap": "~3.3.5"
+  }
+}

@@ -1,3 +1,55 @@
 <div id="giamgiaroi" style="margin:10px 0 10px 0;">
-    <button class="button-success pure-button" data-tooltip data-tooltip-label="" data-tooltip-message="You found the sacred tooltip of holding! Good on you. ;-)">Theo dõi giá</button>
+    <a class="btn btn-success" title="Click vào đây để theo dõi giá cho sản phẩm này." data-toggle="modal" data-target="#myModal">Theo dõi giá</a>
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                            aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">Theo dõi giá sản phẩm</h4>
+                </div>
+                <div class="modal-body">
+                    <p><span class="label label-info"><h3>Thông báo cho tôi khi giá sản phẩm này thoả mãn điều kiện sau : </h3></span></p>
+                    <div class="table-responsive">
+                        <table class="table">
+                            <thead>
+                            <tr>
+                                <th style="width: 10%"></th>
+                                <th style="width: 40%">Tên sản phẩm</th>
+                                <th style="width: 5%"></th>
+                                <th style="width: 35%">Giá</th>
+                                <th style="width: 10%"></th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td><img src="{productImage}" alt="{productTitle}" width="100px"/></td>
+                                <td>{productTitle}</td>
+                                <td>
+                                    <select class="" name="sltCondition" id="sltCondition">
+                                        <option value="lteq" selected>&lt;=</option>
+                                        <option value="gteq">&gt;=</option>
+                                    </select>
+                                </td>
+                                <td><b>({productPrice.sign})</b> &nbsp;<input type="number" class="productPrice" value="{productPrice.price}" step="0.01" maxlength="10"/></td>
+                                <td><a href="#" class="btn btn-warning" data-dismiss="modal" id="btnAcceptCondition">Xác nhận</a></td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <input type="hidden" id="productUrl" value='{productUrl}'/>
+                    <input type="hidden" id="productId" value='{productASIN}'/>
+                    <input type="hidden" id="productTitle" value='{productTitle}'/>
+                    <input type="hidden" id="productImage" value='{productImage}'/>
+                    <input type="hidden" id="productCurrentPrice" value='{productPrice}'/>
+                    <input type="hidden" id="productConditionPrice" value='{productPrice}'/>
+                    <input type="hidden" id="productCondition" value='lteq'/>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Đóng</button>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
