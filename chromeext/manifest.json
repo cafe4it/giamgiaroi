@@ -29,7 +29,10 @@
   "content_scripts": [
     {
       "matches": [
-        "http://*/*"
+        "*://*/gp/product/*",
+        "*://*/*/gp/product/*",
+        "*://*/*/dp/*",
+        "*://*/dp/*"
       ],
       "css":[
         "js/bower_components/bootstrap/dist/css/bootstrap.min.css",

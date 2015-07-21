@@ -77,7 +77,7 @@ function parseAmazonPrice(locale,priceStr) {
 }
 
 function productAmazonImage() {
-    var selectors = ['div.imgTagWrapper > img', 'img#main-image', 'img#imgBlkFront', '#combinedPriceBlock span.a-size-medium.a-color-price'];
+    var selectors = ['div.imgTagWrapper img','li.itemNo0 div.imgTagWrapper img', 'img#main-image', 'img#imgBlkFront', '#combinedPriceBlock span.a-size-medium.a-color-price'];
     var selector = _.find(selectors, function (s) {
         return $(s).length === 1;
     });

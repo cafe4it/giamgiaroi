@@ -1,0 +1,37 @@
+<template name="register">
+    <form id="frmRegister" class="form-horizontal" data-toggle="validator" role="form">
+        <div class="form-group">
+            <label for="txtUsername" class="col-sm-4 control-label">Tên đăng nhập</label>
+            <div class="col-sm-8">
+                <input type="text" class="form-control" id="txtUsername" name="username" required data-error="Tên đăng nhập không được trống."/>
+                <div class="help-block with-errors"></div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="txtEmail" class="col-sm-4 control-label">Email</label>
+            <div class="col-sm-8">
+                <input type="email" class="form-control" id="txtEmail" name="email" required data-error="Email không được trống."/>
+                <div class="help-block with-errors"></div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="txtPassword" class="col-sm-4 control-label">Mật khẩu</label>
+            <div class="col-sm-8">
+                <input type="password" class="form-control" id="txtPassword" name="password" required data-error="Mật khẩu không được trống."/>
+                <div class="help-block with-errors"></div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="txtPassword" class="col-sm-4 control-label">Xác nhận mật khẩu</label>
+            <div class="col-sm-8">
+                <input type="password" class="form-control" id="txtPassword2" name="password2" data-match="#txtPassword" data-match-error="Xác nhận mật khẩu không khớp."/>
+                <div class="help-block with-errors"></div>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-sm-offset-4 col-sm-8">
+                <button type="submit" id="btnRegister" class="btn btn-info">Đăng ký</button> &nbsp; <button type="reset" class="btn btn-default">Làm lại</button>
+            </div>
+        </div>
+    </form>
+</template>
