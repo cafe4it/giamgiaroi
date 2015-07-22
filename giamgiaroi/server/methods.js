@@ -1,15 +1,22 @@
 if (Meteor.isServer) {
     Meteor.methods({
         RegisterUser: function (model) {
-            check(model, {
-                username: String,
-                email: String,
-                password: String
-            });
+            try{
+                check(model, {
+                    username: String,
+                    email: String,
+                    password: String
+                });
 
-            var userId = Accounts.createUser(model.username, model.email, model.password);
+                var userId = Accounts.createUser(model);
 
-            
+                Roles.addUsersToRoles(userId, ['user']);
+
+                return 'success';
+            }catch(ex){
+                console.log(ex);
+                return 'fail';
+            }
         }
     })
 }

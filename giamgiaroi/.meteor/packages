@@ -13,3 +13,5 @@ accounts-password
 alanning:roles
 meteorhacks:fast-render
 meteorhacks:subs-manager
+dburles:collection-helpers
+xolvio:cucumber
