@@ -4,6 +4,7 @@
   "password" : "@Binhminh@33",
   "roles" : ["admin","moderator","user"],
   "profile" : {
-    "fullName" : "Nguyen Xuan Cong"
+    "fullName" : "Nguyen Xuan Cong",
+    "locale" : "vi"
   }
 }

@@ -1,4 +1,12 @@
 if (Meteor.isServer) {
+
+    Meteor.startup(function(){
+        initAdmin();
+        initFlipkArtCfg();
+    })
+}
+
+var initAdmin = function(){
     if (Meteor.users.find().count() == 0) {
         var adminCfg = JSON.parse(Assets.getText('admin.json'));
         check(adminCfg, {
@@ -7,7 +15,8 @@ if (Meteor.isServer) {
             password: String,
             roles : [String],
             profile: {
-                fullName: String
+                fullName: String,
+                locale : String
             }
         });
         if (adminCfg) {
@@ -28,4 +37,12 @@ if (Meteor.isServer) {
             console.log('admin Id : ', uId);
         }
     }
+}
+
+var initFlipkArtCfg = function(){
+    var cfg = JSON.parse(Assets.getText("flipkart.json"));
+    FlipkArtApi = _.extend(FlipkArtApi, {
+        Id : cfg.Id,
+        Token : cfg.Token
+    });
 }
