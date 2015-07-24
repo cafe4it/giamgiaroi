@@ -9,9 +9,13 @@ FlowRouter.route('/', {
     }
 });
 
-FlowRouter.route('/dangky-dangnhap', {
-    name: 'authenticate',
-    action: function (p, q) {
-        FlowLayout.render('defaultLayout', {top: 'header', main: 'authenticate'});
+var flipkartRoutes = FlowRouter.group({
+    prefix : '/flipkart'
+});
+
+flipkartRoutes.route('/',{
+    name : 'flipkart_home',
+    action : function(p,q){
+        FlowLayout.render('defaultLayout',{top : 'header', main:'flipkart_home'})
     }
 })

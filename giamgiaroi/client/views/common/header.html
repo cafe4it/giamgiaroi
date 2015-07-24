@@ -12,15 +12,15 @@
             </div>
             <div id="navbar" class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li class="active"><a href="/">Home</a></li>
-                    <li><a href="/">About</a></li>
+                    <li class="{{isActiveRoute name='home'}}"><a href="/">Home</a></li>
+                    <li class="{{isActiveRoute name='flipkart_home'}}"><a href="/flipkart/">FlipkArt</a></li>
                     <li><a href="#">Contact</a></li>
 
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
                     {{#if currentUser}}
                     <li class="dropdown">
-                        <a href="/" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+                        <a href="/" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{{currentUser.profile.fullName}} <span class="caret"></span></a>
                         <ul class="dropdown-menu">
                             <li><a href="#">Action</a></li>
                             <li><a href="#">Another action</a></li>
@@ -32,7 +32,7 @@
                         </ul>
                     </li>
                     {{else}}
-                    <li><a href="/dangky-dangnhap">Đăng ký / Đăng nhập</a></li>
+                        {{> loginButtons}}
                     {{/if}}
                 </ul>
             </div><!--/.nav-collapse -->

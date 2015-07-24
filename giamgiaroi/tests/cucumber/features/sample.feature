@@ -19,7 +19,7 @@ Feature: One-liner description of this feature
   @dev
   Scenario: This scenario will run on both dev and CI
     When Tôi chuyển đến "/"
-    Then Tôi sẽ nhìn thấy tiêu đề là "Giảm giá rồi"
+    Then Tôi sẽ nhìn thấy tiêu đề là "PriceBuddy"
 
   # This scenario will not run as part of the Meteor dev cycle because it does not have the @dev tag
   # But it will run on CI if you use `meteor --test` for instance
