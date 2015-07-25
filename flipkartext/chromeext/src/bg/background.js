@@ -15,7 +15,24 @@
  sendResponse();
  });*/
 
-/*
+var ddpConnection = undefined;
+var isShowPageAction = false;
+chrome.runtime.onMessage.addListener(function(msg, sender) {
+    /* First, validate the message's structure */
+    if ((msg.from === 'content') && (msg.subject === 'showPageAction')) {
+        isShowPageAction = true;
+        if(ddpConnection === undefined && window.ddpConnection === undefined){
+            ddpConnection = new Asteroid("localhost:3000");
+            window.ddpConnection = ddpConnection;
+            console.log('bg script starting');
+        }
+        if(msg.product){
+            var rs = ddpConnection.call('Extension_initProduct',msg.product);
+            console.log(rs);
+        }
+    }
+});
+
 var i = 1;
 var rule1 = {
     conditions: [
@@ -30,12 +47,6 @@ chrome.runtime.onInstalled.addListener(function (details) {
     chrome.declarativeContent.onPageChanged.removeRules(undefined, function () {
         chrome.declarativeContent.onPageChanged.addRules([rule1]);
     });
-});*/
-
-chrome.runtime.onMessage.addListener(function(msg, sender) {
-    /* First, validate the message's structure */
-    if ((msg.from === 'content') && (msg.subject === 'showPageAction')) {
-        /* Enable the page-action for the requesting tab */
-        chrome.pageAction.show(sender.tab.id);
-    }
 });
+
+

@@ -14,21 +14,30 @@ Package.onUse(function (api) {
     api.versionsFrom('1.1.0.2');
 
     api.use('meteorhacks:async', ['server']);
+    api.use('ongoworks:security', ['server']);
     api.use('http', ['server']);
     api.use('templating', ['client']);
     api.use('blaze', ['client']);
     api.use('tap:i18n', ['client']);
+    api.use('meteorhacks:flow-router', ['client', 'server']);
+    api.use('meteorhacks:flow-layout', ['client']);
     api.use('arillo:flow-router-helpers', ['client']);
     api.use('underscore', ['client', 'server']);
+    api.use('underscorestring:underscore.string', ['client', 'server']);
 
     api.addFiles('private/flipkart.json', 'server', {isAsset: true});
 
     api.addFiles('server/000___.js', ['server']);
     api.addFiles('server/000__startup.js', ['server']);
     api.addFiles('server/000_helpers.js', ['server']);
+    api.addFiles('server/000_publication.js', ['server']);
     api.addFiles('server/001_methods.js', ['server']);
+    api.addFiles('lib/routes.js', ['server','client']);
+    api.addFiles('lib/schemas.js', ['server','client']);
+    api.addFiles('server/000_security.js', ['server']);
 
     api.addFiles('client/views/flipkart_home.html', ['client']);
+    api.addFiles('client/views/flipkart_home.js', ['client']);
 
 
 });

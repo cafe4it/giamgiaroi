@@ -1,7 +1,11 @@
 <template name="flipkart_home">
     <div class="row">
         <div class="col-md-12">
-            body...
+            <ul>
+            {{#each products}}
+                <li>{{title}}</li>
+            {{/each}}
+            </ul>
         </div>
     </div>
 </template>

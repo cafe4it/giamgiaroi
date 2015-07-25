@@ -11,7 +11,13 @@
   },
   "default_locale": "en",
   "background": {
-    "scripts": ["src/bg/background.js"],
+    "scripts": [
+      "js/bower_components/jquery/dist/jquery.min.js",
+      "js/bower_components/ddp.js/src/ddp.js",
+      "js/bower_components/q/q.js",
+      "js/bower_components/asteroid/dist/asteroid.chrome.js",
+      "src/bg/background.js"
+    ],
     "persistent": false
   },
   "page_action": {
@@ -22,7 +28,12 @@
   "content_scripts": [
     {
       "matches": ["http://www.flipkart.com/*/p/*?pid=*"],
-      "js": ["src/page_action/content_script.js"]
+      "js": [
+        "js/bower_components/jquery/dist/jquery.min.js",
+        "js/bower_components/ddp.js/src/ddp.js",
+        "js/bower_components/q/q.js",
+        "js/bower_components/asteroid/dist/asteroid.chrome.js",
+        "src/page_action/content_script.js"]
     }
   ],
   "permissions" : [

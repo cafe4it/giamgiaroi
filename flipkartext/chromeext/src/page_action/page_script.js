@@ -9,14 +9,14 @@
             currentWindow: true
         }, function(tabs) {
             /* ...and send a request for the DOM info... */
-            chrome.tabs.sendMessage(
-                tabs[0].id,
-                {from: 'popup', subject: 'ProductId'},
-                /* ...also specifying a callback to be called
-                 *    from the receiving end (content script) */
-                function(response){
-                    document.getElementById('ProductId').textContent = response.pid;
-                });
+            chrome.tabs.sendMessage(tabs[0].id, {from: 'popup', subject: 'productInfo'}, setProductInfo);
         });
     });
 })();
+
+function setProductInfo(res){
+    document.getElementById('ProductId').textContent = res.pid;
+    document.getElementById('ProductTitle').textContent = res.title;
+    document.getElementById('ProductPrice').textContent = res.price;
+    document.getElementById('ProductImage').textContent = res.thumbnail;
+}

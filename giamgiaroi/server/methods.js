@@ -17,6 +17,9 @@ if (Meteor.isServer) {
                 console.log(ex);
                 return 'fail';
             }
+        },
+        createTemporaryUserIfNotExists : function(email){
+
         }
     })
 }

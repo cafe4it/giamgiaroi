@@ -46,6 +46,42 @@ if(Meteor.isServer){
                 msg : 'Fail',
                 data : {}
             }
+        },
+        Extension_initProduct : function(product){
+            try{
+                check(product,{
+                    pid : String,
+                    title : String,
+                    price : Number,
+                    thumbnail : String
+                });
+                var p = FlipkArt_Products.findOne({pid : product.pid});
+                if(!p){
+                    var slug = s.slugify(product.title),
+                        updatedAt = new Date;
+                    var pid = FlipkArt_Products.insert({
+                        pid : product.pid,
+                        title : product.title,
+                        slug : slug,
+                        thumbnail : product.thumbnail,
+                        updatedAt : updatedAt
+                    });
+
+                    FlipkArt_Products_Prices.upsert({pid : pid},{
+                        $set : {
+                            pid : product.pid,
+                            price : product.price,
+                            updatedAt : updatedAt
+                        }
+                    });
+
+                    return pid;
+                }else{
+                    return p._id;
+                }
+            }catch(ex){
+                console.log(ex)
+            }
         }
     })
 }
