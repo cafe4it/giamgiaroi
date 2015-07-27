@@ -16,20 +16,29 @@
  });*/
 
 var ddpConnection = undefined;
+var productInfo = undefined;
 var isShowPageAction = false;
-chrome.runtime.onMessage.addListener(function(msg, sender) {
+chrome.runtime.onMessage.addListener(function (msg, sender, response) {
     /* First, validate the message's structure */
     if ((msg.from === 'content') && (msg.subject === 'showPageAction')) {
         isShowPageAction = true;
-        if(ddpConnection === undefined && window.ddpConnection === undefined){
+        if (ddpConnection === undefined && window.ddpConnection === undefined) {
             ddpConnection = new Asteroid("localhost:3000");
             window.ddpConnection = ddpConnection;
             console.log('bg script starting');
         }
-        if(msg.product){
-            var rs = ddpConnection.call('Extension_initProduct',msg.product);
-            console.log(rs);
-        }
+        productInfo = msg.product;
+        /*if (msg.product) {
+            var rs = ddpConnection.call('Extension_initProduct', msg.product);
+            rs.result.then(function (productDetailLink) {
+                var product = $.extend(true, msg.product, {link_detail: productDetailLink});
+                chrome.runtime.onMessage.addListener(function (msg, sender, response) {
+                    if ((msg.from === 'popup') && (msg.subject === 'productInfo')) {
+                        response(product);
+                    }
+                })
+            })
+        }*/
     }
 });
 
@@ -37,7 +46,7 @@ var i = 1;
 var rule1 = {
     conditions: [
         new chrome.declarativeContent.PageStateMatcher({
-            pageUrl: {hostEquals: 'www.flipkart.com', schemes: ['http'], queryContains :'pid='}
+            pageUrl: {hostEquals: 'www.flipkart.com', schemes: ['http'], queryContains: 'pid='}
         })
     ],
     actions: [new chrome.declarativeContent.ShowPageAction()]
@@ -48,5 +57,9 @@ chrome.runtime.onInstalled.addListener(function (details) {
         chrome.declarativeContent.onPageChanged.addRules([rule1]);
     });
 });
+
+chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
+
+})
 
 

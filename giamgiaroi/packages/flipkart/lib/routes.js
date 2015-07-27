@@ -11,3 +11,10 @@ flipkartRoutes.route('/',{
         FlowLayout.render('defaultLayout',{top : 'header', main:'flipkart_home'})
     }
 });
+
+flipkartRoutes.route('/:productId/:slug',{
+    name : 'flipkart_product_detail',
+    action : function(p, q){
+
+    }
+})

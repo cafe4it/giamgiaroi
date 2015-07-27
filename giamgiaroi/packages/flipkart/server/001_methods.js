@@ -1,6 +1,13 @@
 if(Meteor.isServer){
-
+    function product_detail_link(pid, slug){
+        var detail_link = FlowRouter.path('flipkart_product_detail',{productId : pid, slug : slug});
+        return Meteor.absoluteUrl(detail_link.substr(1))
+    }
     Meteor.methods({
+        getProductLink : function(path, productId){
+            var tmp = _.template(FlipkArtApi.ProductLinkTmp);
+            return tmp({path : path, pId : productId, affId : FlipkArtApi.Id});
+        },
         FlipkArt_ProductFeeds : function(){
             try{
                 var rs = Async.runSync(function(done){
@@ -52,32 +59,38 @@ if(Meteor.isServer){
                 check(product,{
                     pid : String,
                     title : String,
-                    price : Number,
-                    thumbnail : String
+                    description : String,
+                    price : String,
+                    maxPrice : String,
+                    thumbnail : String,
+                    pathName : String
                 });
-                var p = FlipkArt_Products.findOne({pid : product.pid});
+                var p = FlipkArt_Products.findOne({productId : product.pid});
                 if(!p){
                     var slug = s.slugify(product.title),
                         updatedAt = new Date;
                     var pid = FlipkArt_Products.insert({
-                        pid : product.pid,
+                        productId : product.pid,
                         title : product.title,
                         slug : slug,
+                        path : product.pathName,
+                        description : product.description,
                         thumbnail : product.thumbnail,
                         updatedAt : updatedAt
                     });
-
-                    FlipkArt_Products_Prices.upsert({pid : pid},{
+                    var price = (s.startsWith(product.price,'Rs.')) ? s.strRight(product.price,'Rs.').trim() : product.price,
+                        maxPrice = (s.startsWith(product.maxPrice,'Rs.')) ? s.strRight(product.maxPrice,'Rs.').trim() : product.maxPrice;
+                    FlipkArt_Products_Prices.upsert({productId : product.pid},{
                         $set : {
-                            pid : product.pid,
-                            price : product.price,
+                            productId : product.pid,
+                            price : price,
+                            max_price : maxPrice,
                             updatedAt : updatedAt
                         }
                     });
-
-                    return pid;
+                    return product_detail_link(product.pid, slug);
                 }else{
-                    return p._id;
+                    return product_detail_link(p.productId, p.slug);
                 }
             }catch(ex){
                 console.log(ex)

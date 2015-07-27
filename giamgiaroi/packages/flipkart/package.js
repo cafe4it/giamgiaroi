@@ -21,7 +21,9 @@ Package.onUse(function (api) {
     api.use('tap:i18n', ['client']);
     api.use('meteorhacks:flow-router', ['client', 'server']);
     api.use('meteorhacks:flow-layout', ['client']);
+    api.use('deanius:promise', ['client','server']);
     api.use('arillo:flow-router-helpers', ['client']);
+    api.use('dburles:collection-helpers', ['server']);
     api.use('underscore', ['client', 'server']);
     api.use('underscorestring:underscore.string', ['client', 'server']);
 
@@ -31,13 +33,16 @@ Package.onUse(function (api) {
     api.addFiles('server/000__startup.js', ['server']);
     api.addFiles('server/000_helpers.js', ['server']);
     api.addFiles('server/000_publication.js', ['server']);
-    api.addFiles('server/001_methods.js', ['server']);
     api.addFiles('lib/routes.js', ['server','client']);
+    api.addFiles('server/001_methods.js', ['server']);
     api.addFiles('lib/schemas.js', ['server','client']);
     api.addFiles('server/000_security.js', ['server']);
 
     api.addFiles('client/views/flipkart_home.html', ['client']);
     api.addFiles('client/views/flipkart_home.js', ['client']);
+    api.addFiles('client/helper/helpers.js', ['client']);
+    api.addFiles('client/views/flipkart_product_detail.html', ['client']);
+    api.addFiles('client/views/flipkart_product_detail.js', ['client']);
 
 
 });

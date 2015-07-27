@@ -1,4 +1,5 @@
 {
   "Id" : "cafe4itgm",
-  "Token" : "48e133ae2325498985a76aa622919413"
+  "Token" : "48e133ae2325498985a76aa622919413",
+  "ProductLinkTmp" : "http://dl.flipkart.com/dl<%=path%>?pid=<%=pId%>&affid=<%=affId%>"
 }
