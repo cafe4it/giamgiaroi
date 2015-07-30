@@ -1,7 +1,20 @@
 <template name="flipkart_product_detail">
     <div class="row">
         <div class="col-md-12">
-
+            <ol class="breadcrumb">
+                <li><a href="{{pathFor 'flipkart_home'}}">Flipkart</a></li>
+                <li class="active">{{product.title}}</li>
+            </ol>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-3">
+            <div class="productImage">
+                <img class="img-responsive" src="{{product.thumbnail}}" alt="{{product.title}}"/>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <p>Price : Rs. {{product.latest.price}}</p>
         </div>
     </div>
 </template>

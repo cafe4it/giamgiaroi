@@ -12,7 +12,7 @@
             {{#each products}}
                 <tr>
                    <td><img src="{{thumbnail}}" alt="{{title}}" width="200px"/></td>
-                    <td><a href="{{pathFor 'flipkart_product_detail' productId=productId slug=slug}}">{{title}}</a></td>
+                    <td><a href="{{product_detail_url productId slug}}">{{title}}</a></td>
                     <td><a href="{{productLink}}" class="btn btn-success" target="_blank">View On Flipkart</a></td>
                 </tr>
             {{/each}}

@@ -25,6 +25,7 @@
     "default_title": "page action demo",
     "default_popup": "src/page_action/page_action.html"
   },
+  "web_accessible_resources":["icons/*.png","src/page_action/template.html"],
   "content_scripts": [
     {
       "matches": ["http://www.flipkart.com/*/p/*?pid=*"],
@@ -33,6 +34,7 @@
         "js/bower_components/ddp.js/src/ddp.js",
         "js/bower_components/q/q.js",
         "js/bower_components/asteroid/dist/asteroid.chrome.js",
+        "js/bower_components/dustjs-linkedin/dist/dust-full.min.js",
         "src/page_action/content_script.js"]
     }
   ],

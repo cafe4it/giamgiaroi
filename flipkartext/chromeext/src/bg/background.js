@@ -18,27 +18,28 @@
 var ddpConnection = undefined;
 var productInfo = undefined;
 var isShowPageAction = false;
-chrome.runtime.onMessage.addListener(function (msg, sender, response) {
+chrome.runtime.onMessage.addListener(function (msg, sender, cb) {
     /* First, validate the message's structure */
     if ((msg.from === 'content') && (msg.subject === 'showPageAction')) {
         isShowPageAction = true;
         if (ddpConnection === undefined && window.ddpConnection === undefined) {
             ddpConnection = new Asteroid("localhost:3000");
             window.ddpConnection = ddpConnection;
-            console.log('bg script starting');
         }
-        productInfo = msg.product;
-        /*if (msg.product) {
+        if (msg.product) {
             var rs = ddpConnection.call('Extension_initProduct', msg.product);
             rs.result.then(function (productDetailLink) {
-                var product = $.extend(true, msg.product, {link_detail: productDetailLink});
-                chrome.runtime.onMessage.addListener(function (msg, sender, response) {
-                    if ((msg.from === 'popup') && (msg.subject === 'productInfo')) {
-                        response(product);
-                    }
-                })
-            })
-        }*/
+                cb(productDetailLink);
+                /*chrome.tabs.query({active: true, currentWindow: true}, function(tabs){
+                    chrome.tabs.sendMessage(tabs[0].id,{
+                        from:    'background',
+                        subject: 'setProductLink',
+                        productLink : productDetailLink
+                    });
+                });*/
+            });
+            return true;
+        }
     }
 });
 
@@ -58,8 +59,5 @@ chrome.runtime.onInstalled.addListener(function (details) {
     });
 });
 
-chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
-
-})
 
 

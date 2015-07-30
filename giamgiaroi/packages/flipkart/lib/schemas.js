@@ -9,5 +9,8 @@ FlipkArt_Products.helpers({
     },
     key : function(){
         return FlipkArt_Keys.findOne({acc : 'cafe4it'});
+    },
+    latest : function(){
+        return FlipkArt_Products_Prices.findOne({productId : this.productId}, {sort : {updatedAt : -1}});
     }
 })

@@ -11,7 +11,11 @@ if(Meteor.isServer){
         return FlipkArt_Products_Prices.find();
     });
 
-    Meteor.publish('Flipkart_Product_pId',function(productId){
-        return FlipkArt_Products.find({productId : productId});
-    })
+    Meteor.publish('Flipkart_Product_By',function(params){
+        return FlipkArt_Products.find(params);
+    });
+
+    Meteor.publish('Flipkart_Product_Price',function(productId){
+        return FlipkArt_Products_Prices.find({productId : productId});
+    });
 }

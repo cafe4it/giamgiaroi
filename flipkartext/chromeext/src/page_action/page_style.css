@@ -1,0 +1,58 @@
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, input, textarea, blockquote, p, fieldset {
+    margin: 0px;
+    padding: 0px;
+    line-height: 130%;
+}
+
+body {
+    height:500px;
+    width:600px;
+    min-width:600px;
+    min-height:400px;
+    overflow-x:hidden;
+    padding: 0px;
+    margin: 0px;
+}
+
+h1 {
+    font-size: 2em;
+}
+
+a{
+    text-decoration: none;
+}
+
+.button {
+    display: inline-block;
+    position: relative;
+    border-radius: 2px;
+    background-color:#FDD922;
+    color:#565656;
+    font-weight: bold;
+    padding-top:3px;
+    padding-bottom:1px;
+    padding-right:7px;
+    padding-left:7px;
+    border: 0;
+    border-bottom: 2px solid #eac300;
+}
+
+.button:active {
+    box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2);
+    transition-delay: 0s;
+}
+.button:hover {
+    text-decoration: none;
+    background-color:#eac300;
+    color:#565656;
+    transition: all 0.2s ease-in-out 0s;
+}
+
+.productTitle{
+    background-color: #6fb13c;
+    color : white;
+    padding : 12px;
+    font-weight: bolder;
+    overflow: hidden;
+    white-space: nowrap;
+}

@@ -6,8 +6,6 @@
 
 meteor-platform
 twbs:bootstrap
-meteorhacks:flow-layout
-meteorhacks:flow-router
 accounts-base
 accounts-password
 alanning:roles
@@ -23,8 +21,11 @@ accounts-facebook
 accounts-twitter
 accounts-google
 cafe4it:flipkart
-arillo:flow-router-helpers
 random
 ongoworks:security
 underscorestring:underscore.string
 deanius:promise
+kadira:flow-router
+kadira:blaze-layout
+zimme:active-route
+arillo:flow-router-helpers
