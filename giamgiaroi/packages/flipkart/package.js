@@ -39,6 +39,7 @@ Package.onUse(function (api) {
     api.addFiles('server/000_security.js', ['server']);
 
     api.addFiles('client/stylesheets/flipkart.css', ['client']);
+    api.addFiles('client/lib/autoNumeric.js', ['client']);
     api.addFiles('client/views/flipkart_home.html', ['client']);
     api.addFiles('client/views/flipkart_home.js', ['client']);
     api.addFiles('client/helper/helpers.js', ['client']);

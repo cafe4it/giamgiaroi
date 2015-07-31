@@ -60,6 +60,7 @@ if (Meteor.isServer) {
                 check(product, {
                     pid: String,
                     title: String,
+                    originalTitle : String,
                     description: String,
                     price: String,
                     maxPrice: String,
@@ -73,6 +74,7 @@ if (Meteor.isServer) {
                     var pid = FlipkArt_Products.insert({
                         productId: product.pid,
                         title: product.title,
+                        originalTitle: product.originalTitle,
                         slug: slug,
                         path: product.pathName,
                         description: product.description,

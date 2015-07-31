@@ -44,6 +44,7 @@
 function getProductInfo() {
     var productId = getQueryVariable('pid'),
         title = $('.product-details h1.title').text(),
+        originalTitle = title,
         subtitle = $('.product-details span.subtitle').text() || '',
         description = $('.description-text').text() || $('p.description').text() || '',
         title = (subtitle === '' || title.lastIndexOf(subtitle) !== -1) ? title : title + ' ' + subtitle,
@@ -54,6 +55,7 @@ function getProductInfo() {
     return {
         pid: productId,
         title: title,
+        originalTitle : originalTitle,
         description: description,
         price: price,
         maxPrice: maxPrice,

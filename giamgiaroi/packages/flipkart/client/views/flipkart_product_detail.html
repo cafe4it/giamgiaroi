@@ -13,8 +13,68 @@
                 <img class="img-responsive" src="{{product.thumbnail}}" alt="{{product.title}}"/>
             </div>
         </div>
-        <div class="col-md-3">
-            <p>Price : Rs. {{product.latest.price}}</p>
+        <div class="col-md-9">
+            <div class="row">
+                <p><i class="fa fa-shopping-cart"></i> : Rs. {{product.latest.price}} &nbsp; <a href="{{product.productLink}}" target="_blank" class="btn btn-success">Buy it!</a></p>
+
+                <p>
+                    <span class="text-danger"><i class="fa fa-info-circle"></i> Notify me if this product satisfies the following conditions</span>
+                </p>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="input-group input-group-sm">
+                        <span class="input-group-addon" id="sizing-addon3">&lt;=</span>
+                        <input type="text" class="form-control" id="txtPrice" placeholder="Rs. {{product.latest.price}}"
+                               aria-describedby="sizing-addon3" data-d-group="2" data-a-sign="Rs. ">
+                    </div>
+                    <br/>
+
+                    <div class="input-group input-group-sm">
+                        <span class="input-group-addon" id="sizing-addon3">@</span>
+                        <input type="text" class="form-control" id="txtEmail"
+                               value="{{currentUser.emails.[0].address}}">
+                    </div>
+                    <br/>
+                    <button class="btn btn-warning"><i class="fa fa-info-circle"></i> Notify me!</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+
+            <div class="findOnOther">
+
+                <!-- Nav tabs -->
+                <ul class="nav nav-tabs" role="tablist">
+                    <li role="presentation" class="active"><a href="#amazon" aria-controls="amazon" role="tab" data-toggle="tab"><i class="fa fa-search-plus"></i> Find on Amazon</a></li>
+                    <li role="presentation"><a href="#ebay" aria-controls="ebay" role="tab" data-toggle="tab"><i class="fa fa-search-plus"></i> Find on Ebay</a></li>
+                </ul>
+
+                <!-- Tab panes -->
+                <div class="tab-content">
+                    <div role="tabpanel" class="tab-pane active" id="amazon">
+                        <div class="row">
+                            <div class="col-md-12 col-lg-12">
+                                <div class="input-group">
+                                    <input type="text" class="form-control" placeholder="Search for..." value="{{product.originalTitle}}">
+                                  <span class="input-group-btn">
+                                    <button class="btn btn-info" type="button">Search</button>
+                                     </span>
+                                </div><!-- /input-group -->
+                            </div><!-- /.col-lg-6 -->
+                        </div>
+                    </div>
+                    <div role="tabpanel" class="tab-pane" id="ebay">
+
+                    </div>
+                </div>
+
+            </div>
+            <!-- /input-group -->
         </div>
     </div>
 </template>
