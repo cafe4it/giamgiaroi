@@ -15,6 +15,5 @@
 })();
 
 function setProductInfo(res) {
-    console.log(res);
     $('#mainPopup').html(res);
 }

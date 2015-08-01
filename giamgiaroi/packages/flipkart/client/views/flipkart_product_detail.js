@@ -1,6 +1,9 @@
 Template.flipkart_product_detail.helpers({
     product : function(){
         return FlipkArt_Products.findOne();
+    },
+    selectedSeller : function(selected){
+        return (selected) ? 'selected' : ''
     }
 })
 

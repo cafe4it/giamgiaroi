@@ -22,7 +22,12 @@
             /* Collect the necessary data
              * (For your specific requirements `document.querySelectorAll(...)`
              *  should be equivalent to jquery's `$(...)`) */
-            var product = getProductInfo(),
+            var info = getProductInfo();
+            var product = {
+                    pid : info.pid,
+                    title : info.title,
+                    thumbnail : info.thumbnail
+                },
                 productDetail = $('input#productDetailLink').val() || '';
             $.extend(true, product, {productDetailLink: productDetail})
             /* Directly respond to the sender (popup),
@@ -51,7 +56,12 @@ function getProductInfo() {
         price = $('.shop-section span.selling-price.omniture-field').text(),
         maxPrice = $('.shop-section span.price').text() || price,
         thumb = $('.productImages div.imgWrapper img.productImage.current').attr('src') || '',
-        pathName = window.location.pathname
+        pathName = window.location.pathname,
+        seller = {
+            id : $('.seller-badge-wrap .seller-name').attr('href'),
+            name : $('.seller-badge-wrap .seller-name').html()
+        },
+        sellertables = ($('.seller-table-wrap').length !== 0) ? $('.seller-table-wrap').attr('data-config') : '';
     return {
         pid: productId,
         title: title,
@@ -60,7 +70,9 @@ function getProductInfo() {
         price: price,
         maxPrice: maxPrice,
         thumbnail: thumb,
-        pathName: pathName
+        pathName: pathName,
+        seller : seller,
+        sellertables : sellertables
     }
 }
 

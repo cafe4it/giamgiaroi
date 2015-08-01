@@ -15,17 +15,24 @@
         </div>
         <div class="col-md-9">
             <div class="row">
-                <p><i class="fa fa-shopping-cart"></i> : Rs. {{product.latest.price}} &nbsp; <a href="{{product.productLink}}" target="_blank" class="btn btn-success">Buy it!</a></p>
-
-                <p>
+                <div class="col-md-3">
+                    <select name="sltSeller" id="sltSeller" class="form-control">
+                        {{#each product.latest.sellers}}
+                        <option value="{{seller_id}}" {{selectedSeller isDefault}}>{{seller_name}}</option>
+                        {{/each}}
+                    </select>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
                     <span class="text-danger"><i class="fa fa-info-circle"></i> Notify me if this product satisfies the following conditions</span>
-                </p>
+                </div>
             </div>
             <div class="row">
                 <div class="col-md-4">
                     <div class="input-group input-group-sm">
                         <span class="input-group-addon" id="sizing-addon3">&lt;=</span>
-                        <input type="text" class="form-control" id="txtPrice" placeholder="Rs. {{product.latest.price}}"
+                        <input type="text" class="form-control" id="txtPrice" placeholder="Rs. "
                                aria-describedby="sizing-addon3" data-d-group="2" data-a-sign="Rs. ">
                     </div>
                     <br/>

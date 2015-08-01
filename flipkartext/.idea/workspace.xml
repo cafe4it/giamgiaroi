@@ -4,14 +4,13 @@
     <list default="true" id="8378ae5c-5b16-4b51-bc89-f066773fdf0a" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../giamgiaroi/packages/meteor-active-route" afterPath="$PROJECT_DIR$/../giamgiaroi/packages/meteor-active-route" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../giamgiaroi/packages/meteor-flow-router-helpers" afterPath="$PROJECT_DIR$/../giamgiaroi/packages/meteor-flow-router-helpers" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../giamgiaroi/packages/flipkart/server/000_security.js" afterPath="$PROJECT_DIR$/../giamgiaroi/packages/flipkart/server/000_security.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../giamgiaroi/packages/flipkart/server/001_methods.js" afterPath="$PROJECT_DIR$/../giamgiaroi/packages/flipkart/server/001_methods.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/chromeext/src/page_action/content_script.js" afterPath="$PROJECT_DIR$/chromeext/src/page_action/content_script.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../giamgiaroi/packages/flipkart/client/stylesheets/flipkart.css" afterPath="$PROJECT_DIR$/../giamgiaroi/packages/flipkart/client/stylesheets/flipkart.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../giamgiaroi/packages/flipkart/client/views/flipkart_product_detail.html" afterPath="$PROJECT_DIR$/../giamgiaroi/packages/flipkart/client/views/flipkart_product_detail.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../giamgiaroi/packages/flipkart/client/views/flipkart_product_detail.js" afterPath="$PROJECT_DIR$/../giamgiaroi/packages/flipkart/client/views/flipkart_product_detail.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../giamgiaroi/packages/flipkart/package.js" afterPath="$PROJECT_DIR$/../giamgiaroi/packages/flipkart/package.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../giamgiaroi/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../giamgiaroi/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/chromeext/src/page_action/page_script.js" afterPath="$PROJECT_DIR$/chromeext/src/page_action/page_script.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../giamgiaroi/packages/flipkart/lib/schemas.js" afterPath="$PROJECT_DIR$/../giamgiaroi/packages/flipkart/lib/schemas.js" />
     </list>
     <ignored path="flipkartext.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -65,8 +64,8 @@
       <file leaf-file-name="content_script.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/chromeext/src/page_action/content_script.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.69072163">
-              <caret line="57" column="21" selection-start-line="57" selection-start-column="8" selection-end-line="57" selection-end-column="21" />
+            <state vertical-scroll-proportion="0.3041237">
+              <caret line="62" column="10" selection-start-line="62" selection-start-column="10" selection-end-line="62" selection-end-column="10" />
               <folding>
                 <element signature="e#0#43#0" expanded="false" />
               </folding>
@@ -78,21 +77,9 @@
         <entry file="file://$PROJECT_DIR$/chromeext/src/page_action/page_script.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="17" column="21" selection-start-line="17" selection-start-column="21" selection-end-line="17" selection-end-column="21" />
+              <caret line="16" column="30" selection-start-line="16" selection-start-column="30" selection-end-line="16" selection-end-column="30" />
               <folding>
                 <element signature="e#0#43#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="template.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/chromeext/src/page_action/template.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.625">
-              <caret line="1" column="48" selection-start-line="1" selection-start-column="48" selection-end-line="1" selection-end-column="48" />
-              <folding>
-                <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -116,11 +103,11 @@
       <list>
         <option value="$PROJECT_DIR$/chromeext/js/bower.json" />
         <option value="$PROJECT_DIR$/chromeext/manifest.json" />
-        <option value="$PROJECT_DIR$/chromeext/src/page_action/page_script.js" />
         <option value="$PROJECT_DIR$/chromeext/src/bg/background.js" />
         <option value="$PROJECT_DIR$/chromeext/src/page_action/page_action.html" />
         <option value="$PROJECT_DIR$/chromeext/src/page_action/template.html" />
         <option value="$PROJECT_DIR$/chromeext/src/page_action/page_style.css" />
+        <option value="$PROJECT_DIR$/chromeext/src/page_action/page_script.js" />
         <option value="$PROJECT_DIR$/chromeext/src/page_action/content_script.js" />
       </list>
     </option>
@@ -536,6 +523,14 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/chromeext/src/page_action/page_style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="56" column="24" selection-start-line="56" selection-start-column="24" selection-end-line="56" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/chromeext/src/page_action/page_action.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-1.25">
@@ -546,7 +541,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/chromeext/src/page_action/template.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.625">
+        <state vertical-scroll-proportion="0.041208792">
           <caret line="1" column="48" selection-start-line="1" selection-start-column="48" selection-end-line="1" selection-end-column="48" />
           <folding>
             <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#!!top" expanded="true" />
@@ -557,18 +552,10 @@
     <entry file="file://$PROJECT_DIR$/chromeext/src/page_action/page_script.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="17" column="21" selection-start-line="17" selection-start-column="21" selection-end-line="17" selection-end-column="21" />
+          <caret line="16" column="30" selection-start-line="16" selection-start-column="30" selection-end-line="16" selection-end-column="30" />
           <folding>
             <element signature="e#0#43#0" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/chromeext/src/page_action/page_style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="56" column="24" selection-start-line="56" selection-start-column="24" selection-end-line="56" selection-end-column="24" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -582,8 +569,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/chromeext/src/page_action/content_script.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.69072163">
-          <caret line="57" column="21" selection-start-line="57" selection-start-column="8" selection-end-line="57" selection-end-column="21" />
+        <state vertical-scroll-proportion="0.3041237">
+          <caret line="62" column="10" selection-start-line="62" selection-start-column="10" selection-end-line="62" selection-end-column="10" />
           <folding>
             <element signature="e#0#43#0" expanded="false" />
           </folding>

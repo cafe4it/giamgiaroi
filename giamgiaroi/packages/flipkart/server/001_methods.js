@@ -65,7 +65,12 @@ if (Meteor.isServer) {
                     price: String,
                     maxPrice: String,
                     thumbnail: String,
-                    pathName: String
+                    pathName: String,
+                    seller : {
+                        id : String,
+                        name : String
+                    },
+                    sellertables : String
                 });
                 var p = FlipkArt_Products.findOne({productId: product.pid});
                 if (!p) {
@@ -83,11 +88,34 @@ if (Meteor.isServer) {
                     });
                     var price = (s.startsWith(product.price, 'Rs.')) ? s.strRight(product.price, 'Rs.').trim() : product.price,
                         maxPrice = (s.startsWith(product.maxPrice, 'Rs.')) ? s.strRight(product.maxPrice, 'Rs.').trim() : product.maxPrice;
+                    var sellers = [];
+                    if(product.sellertables === ''){
+                        var oneSeller = {
+                            seller_id : product.seller.id,
+                            seller_name : product.seller.name,
+                            price : price,
+                            max_price : maxPrice,
+                            isDefault : true
+                        }
+                        sellers.push(oneSeller);
+                    }else{
+                        var sellertables = JSON.parse(product.sellertables);
+                        if(_.has(sellertables,'dataModel')){
+                            sellers = _.map(sellertables.dataModel,function(seller){
+                                return {
+                                    seller_id : seller.sellerInfo.link,
+                                    seller_name : seller.sellerInfo.name,
+                                    price : seller.priceInfo.sellingPrice,
+                                    max_price : seller.priceInfo.price,
+                                    isDefault : (seller.sellerInfo.link === product.seller.id)
+                                }
+                            })
+                        }
+                    }
                     FlipkArt_Products_Prices.upsert({productId: product.pid}, {
                         $set: {
                             productId: product.pid,
-                            price: price,
-                            max_price: maxPrice,
+                            sellers : sellers,
                             updatedAt: updatedAt
                         }
                     });
