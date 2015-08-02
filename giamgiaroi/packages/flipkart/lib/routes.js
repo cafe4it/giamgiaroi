@@ -22,4 +22,16 @@ flipkartRoutes.route('/:productId/:slug', {
     action: function (p, q) {
         BlazeLayout.render('defaultLayout', {top: 'header', main: 'flipkart_product_detail'})
     }
+});
+
+flipkartRoutes.route('/:productId', {
+    name: 'flipkart_product_detail2',
+    subscriptions: function (p, q) {
+        var params = {productId: p.productId};
+        this.register('Flipkart_Product', Meteor.subscribe('Flipkart_Product_By', params));
+        this.register('Flipkart_Product_Price', Meteor.subscribe('Flipkart_Product_Price', p.productId));
+    },
+    action: function (p, q) {
+        BlazeLayout.render('defaultLayout', {top: 'header', main: 'flipkart_product_detail'})
+    }
 })

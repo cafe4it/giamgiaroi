@@ -23,20 +23,13 @@ chrome.runtime.onMessage.addListener(function (msg, sender, cb) {
     if ((msg.from === 'content') && (msg.subject === 'showPageAction')) {
         isShowPageAction = true;
         if (ddpConnection === undefined && window.ddpConnection === undefined) {
-            ddpConnection = new Asteroid("localhost:3000");
+            ddpConnection = new Asteroid("www.pricebuddy.xyz");
             window.ddpConnection = ddpConnection;
         }
         if (msg.product) {
             var rs = ddpConnection.call('Extension_initProduct', msg.product);
             rs.result.then(function (productDetailLink) {
                 cb(productDetailLink);
-                /*chrome.tabs.query({active: true, currentWindow: true}, function(tabs){
-                    chrome.tabs.sendMessage(tabs[0].id,{
-                        from:    'background',
-                        subject: 'setProductLink',
-                        productLink : productDetailLink
-                    });
-                });*/
             });
             return true;
         }
