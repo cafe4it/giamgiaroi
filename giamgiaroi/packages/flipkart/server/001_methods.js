@@ -93,8 +93,8 @@ if (Meteor.isServer) {
                         var oneSeller = {
                             seller_id : product.seller.id,
                             seller_name : product.seller.name,
-                            price : price,
-                            max_price : maxPrice,
+                            price : priceToNumber(price),
+                            max_price : priceToNumber(maxPrice),
                             isDefault : true
                         }
                         sellers.push(oneSeller);
@@ -105,8 +105,8 @@ if (Meteor.isServer) {
                                 return {
                                     seller_id : seller.sellerInfo.link,
                                     seller_name : seller.sellerInfo.name,
-                                    price : seller.priceInfo.sellingPrice,
-                                    max_price : seller.priceInfo.price,
+                                    price : priceToNumber(seller.priceInfo.sellingPrice),
+                                    max_price : priceToNumber(seller.priceInfo.price),
                                     isDefault : (seller.sellerInfo.link === product.seller.id)
                                 }
                             })
@@ -137,4 +137,8 @@ if (Meteor.isServer) {
             return {};
         }
     })
+}
+
+function priceToNumber(price){
+    return parseFloat(price.toString().replace(/,/g, ''))
 }

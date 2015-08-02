@@ -1,6 +1,7 @@
 <template name="flipkart_home">
     <div class="row">
         <div class="col-md-12 table-responsive">
+            {{#if subsReady}}
             <table class="table">
             <thead>
                 <tr>
@@ -17,6 +18,9 @@
                 </tr>
             {{/each}}
             </table>
+            {{else}}
+                {{> spinner}}
+            {{/if}}
         </div>
     </div>
 </template>

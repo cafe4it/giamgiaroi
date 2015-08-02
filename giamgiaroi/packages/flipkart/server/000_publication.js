@@ -16,6 +16,6 @@ if(Meteor.isServer){
     });
 
     Meteor.publish('Flipkart_Product_Price',function(productId){
-        return FlipkArt_Products_Prices.find({productId : productId});
+        return FlipkArt_Products_Prices.find({productId : productId},{sort : {updatedAt : -1},limit : 1});
     });
 }

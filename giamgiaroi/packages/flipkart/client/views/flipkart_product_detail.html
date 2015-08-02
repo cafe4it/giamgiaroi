@@ -1,4 +1,5 @@
 <template name="flipkart_product_detail">
+    {{#if subsReady}}
     <div class="row">
         <div class="col-md-12">
             <ol class="breadcrumb">
@@ -22,9 +23,13 @@
                         {{/each}}
                     </select>
                 </div>
+                <div class="col-md-2">
+                    <span id="currentPrice">Rs. {{formatIndiaCurrency currentPrice}}</span>
+                </div>
             </div>
             <div class="row">
                 <div class="col-md-12">
+                    <br/>
                     <span class="text-danger"><i class="fa fa-info-circle"></i> Notify me if this product satisfies the following conditions</span>
                 </div>
             </div>
@@ -49,7 +54,9 @@
             </div>
         </div>
     </div>
-
+    {{else}}
+        {{> spinner}}
+    {{/if}}
     <div class="row">
         <div class="col-md-12">
 

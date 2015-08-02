@@ -13,5 +13,9 @@ FlipkArt_Products.helpers({
     },
     latest : function(){
         return FlipkArt_Products_Prices.findOne({productId : this.productId}, {sort : {updatedAt : -1}});
+    },
+    currentSeller : function(){
+        var prices = this.latest();
+        return _.findWhere(prices.sellers, {isDefault : true});
     }
 })

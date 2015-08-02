@@ -27,6 +27,9 @@ underscorestring:underscore.string
 deanius:promise
 kadira:flow-router
 kadira:blaze-layout
-zimme:active-route
-arillo:flow-router-helpers
 fortawesome:fontawesome
+zimme:active-route
+cafe4it:flow-router-helpers
+reactive-var
+meteorhacks:kadira
+sacha:spin

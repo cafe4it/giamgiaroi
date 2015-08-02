@@ -1,12 +1,12 @@
 /**
  * Created by nxcong on 25/07/2015.
  */
-(function () {
-
+$(function () {
+    var productInfo = getProductInfo();
     chrome.runtime.sendMessage({
         from: 'content',
         subject: 'showPageAction',
-        product: getProductInfo()
+        product: productInfo
     }, function (res) {
         $('<input>').attr({
             type: 'hidden',
@@ -22,7 +22,7 @@
             /* Collect the necessary data
              * (For your specific requirements `document.querySelectorAll(...)`
              *  should be equivalent to jquery's `$(...)`) */
-            var info = getProductInfo();
+            var info = productInfo
             var product = {
                     pid : info.pid,
                     title : info.title,
@@ -43,10 +43,12 @@
             return true;
         }
     });
-})();
+});
 
-
-function getProductInfo() {
+/**
+ * Created by nxcong on 01/08/2015.
+ */
+var getProductInfo = function() {
     var productId = getQueryVariable('pid'),
         title = $('.product-details h1.title').text(),
         originalTitle = title,

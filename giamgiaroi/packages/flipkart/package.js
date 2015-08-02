@@ -17,12 +17,14 @@ Package.onUse(function (api) {
     api.use('ongoworks:security', ['server']);
     api.use('http', ['server']);
     api.use('templating', ['client']);
+    api.use('sacha:spin', ['client']);
     api.use('blaze', ['client']);
     api.use('tap:i18n', ['client']);
     api.use('kadira:flow-router', ['client', 'server']);
     api.use('kadira:blaze-layout', ['client']);
+    api.use('reactive-var', ['client']);
     api.use('deanius:promise', ['client','server']);
-    api.use('arillo:flow-router-helpers', ['client']);
+    api.use('cafe4it:flow-router-helpers', ['client']);
     api.use('dburles:collection-helpers', ['server']);
     api.use('underscore', ['client', 'server']);
     api.use('underscorestring:underscore.string', ['client', 'server']);
@@ -40,6 +42,7 @@ Package.onUse(function (api) {
 
     api.addFiles('client/stylesheets/flipkart.css', ['client']);
     api.addFiles('client/lib/autoNumeric.js', ['client']);
+    api.addFiles('client/lib/numeral.min.js', ['client']);
     api.addFiles('client/views/flipkart_home.html', ['client']);
     api.addFiles('client/views/flipkart_home.js', ['client']);
     api.addFiles('client/helper/helpers.js', ['client']);

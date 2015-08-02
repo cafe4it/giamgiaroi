@@ -9,7 +9,8 @@ if(Meteor.isServer){
             Roles.addUsersToRoles(user._id, roles);
             user = _.extend(user,{profile : option.profile, roles : roles})
             return user;
-        })
+        });
+        Kadira.connect('qtPLcbBZsKYBE63cE', 'de208fbd-80b3-4aef-9921-d3775feee37c');
     })
 
     var initAdmin = function(){
