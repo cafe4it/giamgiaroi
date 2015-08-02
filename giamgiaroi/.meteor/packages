@@ -29,7 +29,7 @@ kadira:flow-router
 kadira:blaze-layout
 fortawesome:fontawesome
 zimme:active-route
-cafe4it:flow-router-helpers
 reactive-var
 meteorhacks:kadira
 sacha:spin
+arillo:flow-router-helpers

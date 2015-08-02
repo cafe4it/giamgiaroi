@@ -2,25 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8378ae5c-5b16-4b51-bc89-f066773fdf0a" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../giamgiaroi/public/ext/js/flipkart_getProductInfo.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../giamgiaroi/packages/meteor-active-route" afterPath="$PROJECT_DIR$/../giamgiaroi/packages/meteor-active-route" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../giamgiaroi/packages/meteor-flow-router-helpers" afterPath="$PROJECT_DIR$/../giamgiaroi/packages/meteor-flow-router-helpers" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../giamgiaroi/server/000___.js" afterPath="$PROJECT_DIR$/../giamgiaroi/server/000___.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../giamgiaroi/packages/flipkart/server/000_publication.js" afterPath="$PROJECT_DIR$/../giamgiaroi/packages/flipkart/server/000_publication.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../giamgiaroi/packages/flipkart/server/001_methods.js" afterPath="$PROJECT_DIR$/../giamgiaroi/packages/flipkart/server/001_methods.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/chromeext/src/page_action/content_script.js" afterPath="$PROJECT_DIR$/chromeext/src/page_action/content_script.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../giamgiaroi/packages/flipkart/client/views/flipkart_home.html" afterPath="$PROJECT_DIR$/../giamgiaroi/packages/flipkart/client/views/flipkart_home.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../giamgiaroi/packages/flipkart/client/views/flipkart_product_detail.html" afterPath="$PROJECT_DIR$/../giamgiaroi/packages/flipkart/client/views/flipkart_product_detail.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../giamgiaroi/packages/flipkart/client/views/flipkart_product_detail.js" afterPath="$PROJECT_DIR$/../giamgiaroi/packages/flipkart/client/views/flipkart_product_detail.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../giamgiaroi/.idea/giamgiaroi.iml" afterPath="$PROJECT_DIR$/../giamgiaroi/.idea/giamgiaroi.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../giamgiaroi/packages/flipkart/client/helper/helpers.js" afterPath="$PROJECT_DIR$/../giamgiaroi/packages/flipkart/client/helper/helpers.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../giamgiaroi/packages/flipkart/package.js" afterPath="$PROJECT_DIR$/../giamgiaroi/packages/flipkart/package.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../giamgiaroi/.meteor/packages" afterPath="$PROJECT_DIR$/../giamgiaroi/.meteor/packages" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../giamgiaroi/packages/flipkart/lib/schemas.js" afterPath="$PROJECT_DIR$/../giamgiaroi/packages/flipkart/lib/schemas.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/chromeext/src/page_action/template.html" afterPath="$PROJECT_DIR$/chromeext/src/page_action/template.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../giamgiaroi/.meteor/versions" afterPath="$PROJECT_DIR$/../giamgiaroi/.meteor/versions" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../giamgiaroi/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../giamgiaroi/.idea/workspace.xml" />
     </list>
     <ignored path="flipkartext.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -304,7 +286,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1" y="24" width="1282" height="753" extended-state="6" />
+    <frame x="-1" y="24" width="1282" height="753" extended-state="7" />
     <editor active="false" />
     <layout>
       <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3292683" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />

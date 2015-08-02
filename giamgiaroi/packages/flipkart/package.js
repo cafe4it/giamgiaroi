@@ -24,7 +24,7 @@ Package.onUse(function (api) {
     api.use('kadira:blaze-layout', ['client']);
     api.use('reactive-var', ['client']);
     api.use('deanius:promise', ['client','server']);
-    api.use('cafe4it:flow-router-helpers', ['client']);
+    api.use('arillo:flow-router-helpers', ['client']);
     api.use('dburles:collection-helpers', ['server']);
     api.use('underscore', ['client', 'server']);
     api.use('underscorestring:underscore.string', ['client', 'server']);
