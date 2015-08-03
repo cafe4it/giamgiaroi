@@ -15,6 +15,7 @@ Package.onUse(function (api) {
 
     api.use('meteorhacks:async', ['server']);
     api.use('ongoworks:security', ['server']);
+    api.use('percolate:synced-cron', ['server']);
     api.use('http', ['server']);
     api.use('templating', ['client']);
     api.use('sacha:spin', ['client']);
@@ -39,6 +40,7 @@ Package.onUse(function (api) {
     api.addFiles('server/001_methods.js', ['server']);
     api.addFiles('lib/schemas.js', ['server','client']);
     api.addFiles('server/000_security.js', ['server']);
+    api.addFiles('server/002_cron.js', ['server']);
 
     api.addFiles('client/stylesheets/flipkart.css', ['client']);
     api.addFiles('client/lib/autoNumeric.js', ['client']);
@@ -52,6 +54,7 @@ Package.onUse(function (api) {
     api.addFiles('client/views/deals_of_day.js', ['client']);
     api.addFiles('client/views/top_offers.html', ['client']);
     api.addFiles('client/views/top_offers.js', ['client']);
+    api.addFiles('client/views/flipkart_offers.html', ['client']);
 
 });
 

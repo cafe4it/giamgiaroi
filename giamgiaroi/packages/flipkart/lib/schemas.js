@@ -1,7 +1,7 @@
 FlipkArt_Keys = new Meteor.Collection('Flipkart_Keys');
 FlipkArt_Products = new Meteor.Collection('Flipkart_Products');
 FlipkArt_Products_Prices = new Meteor.Collection('FlipkArt_Products_Prices');
-FlipkArt_Sellers = new Meteor.Collection('FlipkArt_Sellers');
+FlipkArt_Offers = new Meteor.Collection('FlipkArt_Offers');
 
 FlipkArt_Products.helpers({
     productLink : function(){

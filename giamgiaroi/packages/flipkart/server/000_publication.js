@@ -18,4 +18,12 @@ if(Meteor.isServer){
     Meteor.publish('Flipkart_Product_Price',function(productId){
         return FlipkArt_Products_Prices.find({productId : productId},{sort : {updatedAt : -1},limit : 1});
     });
+
+    Meteor.publish('FlipkArt_Offers',function(type){
+        return FlipkArt_Offers.find({type : type});
+    })
+
+    Meteor.publish('FlipkArt_Offers_hasLimit',function(type,limit){
+        return FlipkArt_Offers.find({type : type}, {limit : limit});
+    })
 }

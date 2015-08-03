@@ -12,6 +12,13 @@ flipkartRoutes.route('/', {
     }
 });
 
+flipkartRoutes.route('/offers', {
+    name: 'flipkart_offers',
+    action: function (p, q) {
+        BlazeLayout.render('defaultLayout', {top: 'header', main: 'flipkart_offers'})
+    }
+})
+
 flipkartRoutes.route('/:productId/:slug', {
     name: 'flipkart_product_detail',
     subscriptions: function (p, q) {

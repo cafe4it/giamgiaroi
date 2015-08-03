@@ -28,10 +28,6 @@ Template.flipkart_product_detail.helpers({
 
 Template.flipkart_product_detail.rendered = function () {
     $(document).ready(function () {
-/*        $('.productImage').find('img').each(function () {
-            var imgClass = (this.width / this.height > 1) ? 'wide' : 'tall';
-            $(this).addClass(imgClass);
-        });*/
 
         $('input#txtPrice').autoNumeric('init');
         if(Template.instance().currentPrice.get()){

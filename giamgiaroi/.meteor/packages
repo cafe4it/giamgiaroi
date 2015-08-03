@@ -33,3 +33,4 @@ sacha:spin
 arillo:flow-router-helpers@0.4.1
 zimme:active-route
 deanius:promise@2.2.1
+percolate:synced-cron

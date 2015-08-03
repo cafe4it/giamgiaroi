@@ -1,34 +1,23 @@
-Top_Offers = new Meteor.Collection(null);
-
 Template.flipkart_top_offers.onCreated(function(){
     var self = this;
     self.limit = new ReactiveVar(8);
     self.loaded = new ReactiveVar(0);
 
     self.autorun(function(c){
-/*        var items = PromiseHelper(function(){
-            var promise = Meteor.call('FlipkArt_getTopOffers');
-            return promise.then(function(result){
-                return result.data;
-            })
-        });
+        var limit = self.limit.get();
+        console.log("Asking for "+limit+" Top Offer items…")
+        var subscription = self.subscribe('FlipkArt_Offers_hasLimit','TOPOFFERS',limit);
+        if(subscription.ready()){
+            self.loaded.set(limit);
+            console.log("> Received "+limit+" Top Offer items… \n\n");
+        }else{
+            console.log("> Subscription is not ready yet. \n\n");
+        }
 
-        _.each(items, function(i){
-            Top_Offers.insert(i);
-        });
-        c.stop();*/
-        Meteor.call('FlipkArt_getTopOffers',function(e,r){
-            var items = r.data;
-            _.each(items, function(i){
-                Top_Offers.insert(i);
-                console.log(Top_Offers.find().count())
-            });
-            c.stop();
-        })
     });
 
     self.items = function(){
-        return Top_Offers.find({},{limit : self.limit.get()});
+        return FlipkArt_Offers.find({type : 'TOPOFFERS'},{limit : self.loaded.get()})
     }
 });
 
