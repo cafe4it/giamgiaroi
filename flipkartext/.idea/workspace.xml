@@ -2,6 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8378ae5c-5b16-4b51-bc89-f066773fdf0a" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../giamgiaroi/packages/flipkart/server/001_methods.js" afterPath="$PROJECT_DIR$/../giamgiaroi/packages/flipkart/server/001_methods.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../giamgiaroi/packages/flipkart/client/views/deals_of_day.html" afterPath="$PROJECT_DIR$/../giamgiaroi/packages/flipkart/client/views/deals_of_day.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../giamgiaroi/packages/flipkart/client/stylesheets/flipkart.css" afterPath="$PROJECT_DIR$/../giamgiaroi/packages/flipkart/client/stylesheets/flipkart.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../giamgiaroi/client/views/home/home.html" afterPath="$PROJECT_DIR$/../giamgiaroi/client/views/home/home.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../giamgiaroi/packages/flipkart/package.js" afterPath="$PROJECT_DIR$/../giamgiaroi/packages/flipkart/package.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../giamgiaroi/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../giamgiaroi/.idea/workspace.xml" />
     </list>
@@ -79,7 +84,7 @@
       <file leaf-file-name="page_style.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/chromeext/src/page_action/page_style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.92783505">
+            <state vertical-scroll-proportion="0.27061856">
               <caret line="7" column="14" selection-start-line="7" selection-start-column="14" selection-end-line="7" selection-end-column="14" />
               <folding />
             </state>
@@ -686,7 +691,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/chromeext/src/page_action/page_style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.92783505">
+        <state vertical-scroll-proportion="0.27061856">
           <caret line="7" column="14" selection-start-line="7" selection-start-column="14" selection-end-line="7" selection-end-column="14" />
           <folding />
         </state>

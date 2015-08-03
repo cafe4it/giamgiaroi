@@ -50,6 +50,8 @@ Package.onUse(function (api) {
     api.addFiles('client/views/flipkart_product_detail.js', ['client']);
     api.addFiles('client/views/deals_of_day.html', ['client']);
     api.addFiles('client/views/deals_of_day.js', ['client']);
+    api.addFiles('client/views/top_offers.html', ['client']);
+    api.addFiles('client/views/top_offers.js', ['client']);
 
 });
 

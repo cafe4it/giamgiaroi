@@ -1,0 +1,24 @@
+<template name="flipkart_top_offers">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="panel panel-success">
+                <div class="panel-heading"><b>Top Offers</b></div>
+                <div class="panel-body">
+                    {{#each items}}
+                        <div class="col-sm-4 col-md-3">
+                            <a href="{{url}}" target="_blank" class="thumbnail text-center" data-toggle="tooltip" data-placement="bottom" title="{{title}} {{description}}">
+                                <div class="top-offers-ImgContainer">
+                                    <img src="{{imageUrls.[0].url}}" alt="{{title}} ,{{description}}" class="img-thumbnail"/>
+                                </div>
+                                <p class="deals-of-day-title"><button class="btn btn-warning">{{title}}</button></p>
+                            </a>
+                        </div>
+                    {{/each}}
+                </div>
+                {{#if hasMoreItems}}
+                <div class="panel-footer text-center"><button id="btnLoadMore" class="btn btn-danger">Load More <i class="fa fa-angle-down"></i></button></div>
+                {{/if}}
+            </div>
+        </div>
+    </div>
+</template>
