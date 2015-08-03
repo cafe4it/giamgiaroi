@@ -10,8 +10,8 @@
     </div>
     <div class="row">
         <div class="col-md-3">
-            <div class="productImage">
-                <img class="img-responsive" src="{{product.thumbnail}}" alt="{{product.title}}"/>
+            <div class="pImgContainer2 text-center">
+                <img class="img-thumbnail" src="{{product.thumbnail}}" alt="{{product.title}}"/>
             </div>
         </div>
         <div class="col-md-9">
@@ -24,25 +24,25 @@
                     </select>
                 </div>
                 <div class="col-md-2">
-                    <span id="currentPrice">Rs. {{formatIndiaCurrency currentPrice}}</span>
+                    <span id="currentPrice" class="form-control"><span class="text-success">Rs. {{formatIndiaCurrency currentPrice}}</span></span>
                 </div>
             </div>
             <div class="row">
                 <div class="col-md-12">
                     <br/>
-                    <span class="text-danger"><i class="fa fa-info-circle"></i> Notify me if this product satisfies the following conditions</span>
+                    <p class="text-danger"><i class="fa fa-info-circle"></i> Notify me if this product satisfies the following conditions</p>
                 </div>
             </div>
             <div class="row">
                 <div class="col-md-4">
-                    <div class="input-group input-group-sm">
+                    <div class="input-group input-group-md">
                         <span class="input-group-addon" id="sizing-addon3">&lt;=</span>
                         <input type="text" class="form-control" id="txtPrice" placeholder="Rs. "
                                aria-describedby="sizing-addon3" data-d-group="2" data-a-sign="Rs. ">
                     </div>
                     <br/>
 
-                    <div class="input-group input-group-sm">
+                    <div class="input-group input-group-md">
                         <span class="input-group-addon" id="sizing-addon3">@</span>
                         <input type="text" class="form-control" id="txtEmail"
                                value="{{currentUser.emails.[0].address}}">

@@ -23,7 +23,7 @@ chrome.runtime.onMessage.addListener(function (msg, sender, cb) {
     if ((msg.from === 'content') && (msg.subject === 'showPageAction')) {
         isShowPageAction = true;
         if (ddpConnection === undefined && window.ddpConnection === undefined) {
-            ddpConnection = new Asteroid("www.pricebuddy.xyz");
+            ddpConnection = new Asteroid("localhost:3000");
             window.ddpConnection = ddpConnection;
         }
         if (msg.product) {

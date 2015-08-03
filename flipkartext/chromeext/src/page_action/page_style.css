@@ -5,7 +5,7 @@ body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, input, tex
 }
 
 body {
-    height:500px;
+    height:200px;
     width:600px;
     min-width:600px;
     min-height:200px;

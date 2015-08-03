@@ -10,6 +10,10 @@ FlipkArt_Url.ProductById = function(pId){
     return tpl({Id : pId});
 }
 
+FlipkArt_Url.DotdOffer = function(){
+    return 'https://affiliate-api.flipkart.net/affiliate/offers/v1/dotd/json'
+}
+
 FlipkArt_Helpers.HeadersAuthenticate = function(){
     return {
         "Fk-Affiliate-Id" : FlipkArtApi.Id,

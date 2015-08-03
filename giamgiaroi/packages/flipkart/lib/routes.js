@@ -1,5 +1,5 @@
 var flipkartRoutes = FlowRouter.group({
-    prefix: '/flipkart'
+    prefix: '/fa'
 });
 
 flipkartRoutes.route('/', {

@@ -24,12 +24,12 @@ cafe4it:flipkart
 random
 ongoworks:security
 underscorestring:underscore.string
-deanius:promise
 kadira:flow-router
 kadira:blaze-layout
 fortawesome:fontawesome
-zimme:active-route
 reactive-var
 meteorhacks:kadira
 sacha:spin
-arillo:flow-router-helpers
+arillo:flow-router-helpers@0.4.1
+zimme:active-route
+deanius:promise@2.2.1

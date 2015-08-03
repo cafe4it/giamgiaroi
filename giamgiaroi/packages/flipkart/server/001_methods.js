@@ -55,6 +55,32 @@ if (Meteor.isServer) {
                 data: {}
             }
         },
+        FlipkArt_getDotd : function(){
+            try{
+                var rs = Async.runSync(function(done){
+                    var dotd_Url = 'https://affiliate-api.flipkart.net/affiliate/offers/v1/dotd/json',
+                        authenticate = FlipkArtApi.helpers.HeadersAuthenticate();
+                    HTTP.call('GET', dotd_Url, {
+                        headers : authenticate
+                    },function(err, result){
+                        if(err) throw new Meteor.Error(err);
+                        if(result.data.dotdList){
+                            done(null, result.data.dotdList);
+                        }
+                    })
+                })
+                return {
+                    msg : 'Success',
+                    data : rs.result
+                }
+            }catch(ex){
+                console.log(ex)
+            }
+            return {
+                msg : 'Fail',
+                data : []
+            }
+        },
         Extension_initProduct: function (product) {
             try {
                 check(product, {

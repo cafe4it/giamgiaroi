@@ -23,7 +23,7 @@ Package.onUse(function (api) {
     api.use('kadira:flow-router', ['client', 'server']);
     api.use('kadira:blaze-layout', ['client']);
     api.use('reactive-var', ['client']);
-    api.use('deanius:promise', ['client','server']);
+    api.use('deanius:promise', ['client']);
     api.use('arillo:flow-router-helpers', ['client']);
     api.use('dburles:collection-helpers', ['server']);
     api.use('underscore', ['client', 'server']);
@@ -48,7 +48,8 @@ Package.onUse(function (api) {
     api.addFiles('client/helper/helpers.js', ['client']);
     api.addFiles('client/views/flipkart_product_detail.html', ['client']);
     api.addFiles('client/views/flipkart_product_detail.js', ['client']);
-
+    api.addFiles('client/views/deals_of_day.html', ['client']);
+    api.addFiles('client/views/deals_of_day.js', ['client']);
 
 });
 
