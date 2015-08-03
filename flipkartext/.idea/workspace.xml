@@ -2,21 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8378ae5c-5b16-4b51-bc89-f066773fdf0a" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../giamgiaroi/packages/flipkart/server/000_helpers.js" afterPath="$PROJECT_DIR$/../giamgiaroi/packages/flipkart/server/000_helpers.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../giamgiaroi/packages/flipkart/server/001_methods.js" afterPath="$PROJECT_DIR$/../giamgiaroi/packages/flipkart/server/001_methods.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/chromeext/src/bg/background.js" afterPath="$PROJECT_DIR$/chromeext/src/bg/background.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../giamgiaroi/packages/flipkart/client/stylesheets/flipkart.css" afterPath="$PROJECT_DIR$/../giamgiaroi/packages/flipkart/client/stylesheets/flipkart.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../giamgiaroi/packages/flipkart/private/flipkart.json" afterPath="$PROJECT_DIR$/../giamgiaroi/packages/flipkart/private/flipkart.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../giamgiaroi/packages/flipkart/client/views/flipkart_home.html" afterPath="$PROJECT_DIR$/../giamgiaroi/packages/flipkart/client/views/flipkart_home.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../giamgiaroi/packages/flipkart/client/views/flipkart_product_detail.html" afterPath="$PROJECT_DIR$/../giamgiaroi/packages/flipkart/client/views/flipkart_product_detail.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../giamgiaroi/packages/flipkart/client/views/flipkart_product_detail.js" afterPath="$PROJECT_DIR$/../giamgiaroi/packages/flipkart/client/views/flipkart_product_detail.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../giamgiaroi/client/views/common/header.html" afterPath="$PROJECT_DIR$/../giamgiaroi/client/views/common/header.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../giamgiaroi/client/views/home/home.html" afterPath="$PROJECT_DIR$/../giamgiaroi/client/views/home/home.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../giamgiaroi/packages/flipkart/package.js" afterPath="$PROJECT_DIR$/../giamgiaroi/packages/flipkart/package.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../giamgiaroi/.meteor/packages" afterPath="$PROJECT_DIR$/../giamgiaroi/.meteor/packages" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/chromeext/src/page_action/page_style.css" afterPath="$PROJECT_DIR$/chromeext/src/page_action/page_style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../giamgiaroi/packages/flipkart/lib/routes.js" afterPath="$PROJECT_DIR$/../giamgiaroi/packages/flipkart/lib/routes.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../giamgiaroi/.meteor/versions" afterPath="$PROJECT_DIR$/../giamgiaroi/.meteor/versions" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../giamgiaroi/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../giamgiaroi/.idea/workspace.xml" />
     </list>
