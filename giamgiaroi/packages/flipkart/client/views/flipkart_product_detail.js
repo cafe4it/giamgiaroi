@@ -6,8 +6,7 @@ Template.flipkart_product_detail.onCreated(function () {
         if (FlowRouter.subsReady()) {
             var product = FlipkArt_Products.findOne();
             self.product.set(product);
-            self.currentPrice.set(product.currentSeller().price)
-            $('input#txtPrice').autoNumeric('set', self.currentPrice.get() - 1);
+            self.currentPrice.set(product.currentSeller().price);
             c.stop();
         }
     })
@@ -21,18 +20,20 @@ Template.flipkart_product_detail.helpers({
         return (selected) ? 'selected' : ''
     },
     currentPrice: function () {
-        var currentPrice = Template.instance().currentPrice.get();
-        return currentPrice;
+        return Template.instance().currentPrice.get();
+    },
+    currentPrice1 : function () {
+        return Template.instance().currentPrice.get() - 1;
     }
 })
 
 Template.flipkart_product_detail.rendered = function () {
     $(document).ready(function () {
 
-        $('input#txtPrice').autoNumeric('init');
-        if(Template.instance().currentPrice.get()){
-            $('input#txtPrice').autoNumeric('set', Template.instance().currentPrice.get() - 1);
-        }
+        //$('input#txtPrice').autoNumeric('init');
+        /*if(Template.instance().currentPrice.get()){
+            $('#txtPrice').val(reformatPrice(Template.instance().currentPrice.get() - 1));
+        }*/
     })
 }
 
@@ -44,6 +45,18 @@ Template.flipkart_product_detail.events({
             seller_id = $('#sltSeller').val(),
             selected_Seller = _.findWhere(sellers, {seller_id: seller_id});
         t.currentPrice.set(selected_Seller.price);
-        $('input#txtPrice').autoNumeric('set', selected_Seller.price - 1);
+    },
+    'keyup #txtPrice' : function (e, t) {
+        e.preventDefault();
+        var price = $('#txtPrice').val();
+        if(!price || _.isEmpty(price)) return;
+        $('#txtPrice').val(reformatPrice(price));
+    },
+    'keypress #txtPrice' : function(e,t){
+        if (e.keyCode < 48 || e.keyCode > 57) return false;
     }
-})
+});
+
+function reformatPrice(price){
+    return numeral(price).format('0,0');
+}

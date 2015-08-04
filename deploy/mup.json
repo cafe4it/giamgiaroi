@@ -26,7 +26,7 @@
   "appName": "pricebuddy",
 
   // Location of app (local directory)
-  "app": "/D/Projects/giamgiaroi/giamgiaroi",
+  "app": "~/Projects/giamgiaroi/giamgiaroi",
 
   // Configure environment
   "env": {

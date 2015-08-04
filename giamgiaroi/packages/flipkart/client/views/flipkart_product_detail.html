@@ -36,9 +36,10 @@
             <div class="row">
                 <div class="col-md-4">
                     <div class="input-group input-group-md">
-                        <span class="input-group-addon" id="sizing-addon3">&lt;=</span>
-                        <input type="text" class="form-control" id="txtPrice" placeholder="Rs. "
-                               aria-describedby="sizing-addon3" data-d-group="2" data-a-sign="Rs. ">
+                        <div class="input-group-addon">&lt;= </div>
+                        <span class="input-group-addon" id="sizing-addon3">Rs. </span>
+                        <input type="text" class="form-control" id="txtPrice" placeholder="{{formatIndiaCurrency currentPrice1}}"
+                               aria-describedby="sizing-addon3" value="{{formatIndiaCurrency currentPrice1}}">
                     </div>
                     <br/>
 

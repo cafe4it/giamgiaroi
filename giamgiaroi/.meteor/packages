@@ -12,7 +12,6 @@ alanning:roles
 meteorhacks:fast-render
 meteorhacks:subs-manager
 dburles:collection-helpers
-xolvio:cucumber
 meteorhacks:async
 http
 tap:i18n
