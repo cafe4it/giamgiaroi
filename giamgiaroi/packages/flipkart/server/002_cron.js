@@ -6,12 +6,12 @@ if(Meteor.isServer){
         name: 'Deals Of Day',
         schedule: function(parser) {
             // parser is a later.parse object
-            return parser.text('every 12 hours');
+            return parser.text('every 6 hours');
         },
         job: function() {
             FlipkArt_Offers.remove({type : 'DEALSOFDAY'});
             var rs = Meteor.call('FlipkArt_getDotd'),
-                items = rs._result.data;
+                items = (_.has(rs,'_result')) ? rs._result.data : rs.data;
             _.each(items, function(i){
                 i = _.extend(i, {updatedAt : new Date, type : 'DEALSOFDAY'})
                 FlipkArt_Offers.insert(i)
@@ -24,12 +24,12 @@ if(Meteor.isServer){
         name: 'Top Offers',
         schedule: function(parser) {
             // parser is a later.parse object
-            return parser.text('every 22 hours');
+            return parser.text('every 12 hours');
         },
         job: function() {
             FlipkArt_Offers.remove({type : 'TOPOFFERS'});
             var rs = Meteor.call('FlipkArt_getTopOffers'),
-                items = rs._result.data;
+                items = (_.has(rs,'_result')) ? rs._result.data : rs.data;
             _.each(items, function(i){
                 i = _.extend(i, {updatedAt : new Date, type : 'TOPOFFERS'})
                 FlipkArt_Offers.insert(i)

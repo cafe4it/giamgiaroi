@@ -1,19 +1,23 @@
 <template name="flipkart_deals_of_day">
 <div class="row">
     <div class="col-md-12">
-        <div class="panel panel-primary">
+        <div class="panel panel-success">
             <div class="panel-heading"><b>Deals of the Day</b></div>
             <div class="panel-body">
-                {{#each items}}
-                <div class="col-sm-4 col-md-3">
-                    <a href="{{url}}" target="_blank" class="thumbnail text-center" data-toggle="tooltip" data-placement="bottom" title="{{title}} {{description}}">
-                        <div class="deals-of-day-ImgContainer">
-                            <img src="{{imageUrls.[0].url}}" alt="{{title}} ,{{description}}" class="img-thumbnail"/>
-                        </div>
-                        <p class="deals-of-day-title"><button class="btn btn-warning">{{title}}</button></p>
-                    </a>
-                </div>
-                {{/each}}
+                {{#if Template.subscriptionsReady}}
+                    {{#each items}}
+                    <div class="col-sm-4 col-md-3">
+                        <a href="{{url}}" target="_blank" class="thumbnail text-center" data-toggle="tooltip" data-placement="bottom" title="{{title}} {{description}}">
+                            <div class="deals-of-day-ImgContainer">
+                                <img src="{{imageUrls.[0].url}}" alt="{{title}} ,{{description}}" class="img-thumbnail"/>
+                            </div>
+                            <p class="deals-of-day-title"><button class="btn btn-warning">{{title}}</button></p>
+                        </a>
+                    </div>
+                    {{/each}}
+                {{else}}
+                    {{> widget_loading}}
+                {{/if}}
             </div>
         </div>
     </div>

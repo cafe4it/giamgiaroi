@@ -1,28 +1,30 @@
 <template name="flipkart_home">
+    {{#if subsReady 'Flipkart_Products'}}
     <div class="row">
-        <div class="col-md-12 table-responsive">
-            {{#if subsReady}}
-            <table class="table">
-            <thead>
-                <tr>
-                    <th width="200px"></th>
-                    <th></th>
-                    <th></th>
-                </tr>
-            </thead>
-            {{#each products}}
-                <tr>
-                   <td><div class="pImgContainer2">
-                       <img src="{{thumbnail}}" alt="{{title}}" class="image-thumbnail"/>
-                   </div></td>
-                    <td><a href="{{product_detail_url productId slug}}">{{title}}</a></td>
-                    <td><a href="{{productLink}}" class="btn btn-success" target="_blank">View On Flipkart</a></td>
-                </tr>
-            {{/each}}
-            </table>
-            {{else}}
-                {{> spinner}}
-            {{/if}}
+        <div class="col-md-12">
+                <div class="table-responsive">
+                    <table class="table">
+                        <thead>
+                        <tr>
+                            <th width="200px"></th>
+                            <th></th>
+                            <th></th>
+                        </tr>
+                        </thead>
+                        {{#each products}}
+                            <tr>
+                                <td><div class="pImgContainer2">
+                                    <img src="{{thumbnail}}" alt="{{title}}" class="image-thumbnail"/>
+                                </div></td>
+                                <td><a href="{{product_detail_url productId slug}}">{{title}}</a></td>
+                                <td><a href="{{productLink}}" class="btn btn-success" target="_blank">View On Flipkart</a></td>
+                            </tr>
+                        {{/each}}
+                    </table>
+                </div>
         </div>
     </div>
+    {{else}}
+        {{> page_loading}}
+    {{/if}}
 </template>

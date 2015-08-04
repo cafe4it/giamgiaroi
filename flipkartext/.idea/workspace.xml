@@ -3,16 +3,15 @@
   <component name="ChangeListManager">
     <list default="true" id="8378ae5c-5b16-4b51-bc89-f066773fdf0a" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../giamgiaroi/packages/flipkart/server/000_publication.js" afterPath="$PROJECT_DIR$/../giamgiaroi/packages/flipkart/server/000_publication.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../giamgiaroi/packages/flipkart/server/000_security.js" afterPath="$PROJECT_DIR$/../giamgiaroi/packages/flipkart/server/000_security.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../giamgiaroi/packages/flipkart/server/002_cron.js" afterPath="$PROJECT_DIR$/../giamgiaroi/packages/flipkart/server/002_cron.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/chromeext/src/bg/background.js" afterPath="$PROJECT_DIR$/chromeext/src/bg/background.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../giamgiaroi/packages/flipkart/client/views/deals_of_day.html" afterPath="$PROJECT_DIR$/../giamgiaroi/packages/flipkart/client/views/deals_of_day.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../giamgiaroi/packages/flipkart/client/views/deals_of_day.js" afterPath="$PROJECT_DIR$/../giamgiaroi/packages/flipkart/client/views/deals_of_day.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../giamgiaroi/packages/flipkart/client/views/flipkart_product_detail.js" afterPath="$PROJECT_DIR$/../giamgiaroi/packages/flipkart/client/views/flipkart_product_detail.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../giamgiaroi/client/views/common/header.html" afterPath="$PROJECT_DIR$/../giamgiaroi/client/views/common/header.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../giamgiaroi/client/views/home/home.html" afterPath="$PROJECT_DIR$/../giamgiaroi/client/views/home/home.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../giamgiaroi/packages/flipkart/package.js" afterPath="$PROJECT_DIR$/../giamgiaroi/packages/flipkart/package.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../giamgiaroi/packages/flipkart/client/views/flipkart_home.html" afterPath="$PROJECT_DIR$/../giamgiaroi/packages/flipkart/client/views/flipkart_home.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../giamgiaroi/packages/flipkart/client/views/flipkart_product_detail.html" afterPath="$PROJECT_DIR$/../giamgiaroi/packages/flipkart/client/views/flipkart_product_detail.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../giamgiaroi/.meteor/packages" afterPath="$PROJECT_DIR$/../giamgiaroi/.meteor/packages" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../giamgiaroi/packages/flipkart/lib/routes.js" afterPath="$PROJECT_DIR$/../giamgiaroi/packages/flipkart/lib/routes.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../giamgiaroi/packages/flipkart/lib/schemas.js" afterPath="$PROJECT_DIR$/../giamgiaroi/packages/flipkart/lib/schemas.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../giamgiaroi/.meteor/release" afterPath="$PROJECT_DIR$/../giamgiaroi/.meteor/release" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../giamgiaroi/client/stylesheets/site.css" afterPath="$PROJECT_DIR$/../giamgiaroi/client/stylesheets/site.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../giamgiaroi/packages/flipkart/client/views/top_offers.html" afterPath="$PROJECT_DIR$/../giamgiaroi/packages/flipkart/client/views/top_offers.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../giamgiaroi/packages/flipkart/client/views/top_offers.js" afterPath="$PROJECT_DIR$/../giamgiaroi/packages/flipkart/client/views/top_offers.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../giamgiaroi/.meteor/versions" afterPath="$PROJECT_DIR$/../giamgiaroi/.meteor/versions" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
@@ -57,10 +56,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="background.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="background.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/chromeext/src/bg/background.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
+            <state vertical-scroll-proportion="0.46272492">
               <caret line="25" column="56" selection-start-line="25" selection-start-column="56" selection-end-line="25" selection-end-column="56" />
               <folding />
             </state>
@@ -89,7 +88,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="page_style.css" pinned="false" current-in-tab="true">
+      <file leaf-file-name="page_style.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/chromeext/src/page_action/page_style.css">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
@@ -133,8 +132,8 @@
         <option value="$PROJECT_DIR$/chromeext/manifest.json" />
         <option value="$PROJECT_DIR$/chromeext/src/page_action/content_script.js" />
         <option value="$PROJECT_DIR$/chromeext/src/page_action/template.html" />
-        <option value="$PROJECT_DIR$/chromeext/src/bg/background.js" />
         <option value="$PROJECT_DIR$/chromeext/src/page_action/page_style.css" />
+        <option value="$PROJECT_DIR$/chromeext/src/bg/background.js" />
       </list>
     </option>
   </component>
@@ -147,9 +146,9 @@
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="-1" />
-    <option name="y" value="24" />
-    <option name="width" value="1282" />
-    <option name="height" value="753" />
+    <option name="y" value="25" />
+    <option name="width" value="1368" />
+    <option name="height" value="744" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -175,6 +174,7 @@
     </navigator>
     <panes>
       <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -243,7 +243,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -308,26 +307,26 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1" y="24" width="1282" height="753" extended-state="6" />
+    <frame x="-1" y="25" width="1368" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3292683" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3279743" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24765626" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24758364" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -346,6 +345,16 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/chromeext/src/page_action/page_script.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="14" column="5" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
+          <folding>
+            <element signature="e#0#43#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/chromeext/src/page_action/page_action.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -740,14 +749,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/chromeext/src/bg/background.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="25" column="56" selection-start-line="25" selection-start-column="56" selection-end-line="25" selection-end-column="56" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/chromeext/src/page_action/page_script.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -762,6 +763,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="7" column="14" selection-start-line="7" selection-start-column="14" selection-end-line="7" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chromeext/src/bg/background.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.46272492">
+          <caret line="25" column="56" selection-start-line="25" selection-start-column="56" selection-end-line="25" selection-end-column="56" />
           <folding />
         </state>
       </provider>

@@ -5,13 +5,16 @@ Template.flipkart_top_offers.onCreated(function(){
 
     self.autorun(function(c){
         var limit = self.limit.get();
-        console.log("Asking for "+limit+" Top Offer items…")
+        //console.log("Asking for "+limit+" Top Offer items…")
         var subscription = self.subscribe('FlipkArt_Offers_hasLimit','TOPOFFERS',limit);
         if(subscription.ready()){
             self.loaded.set(limit);
-            console.log("> Received "+limit+" Top Offer items… \n\n");
+            if(limit > 8){
+                setTimeout(function(){window.scrollTo(0,document.body.scrollHeight);},500)
+            }
+            //console.log("> Received "+limit+" Top Offer items… \n\n");
         }else{
-            console.log("> Subscription is not ready yet. \n\n");
+            //console.log("> Subscription is not ready yet. \n\n");
         }
 
     });

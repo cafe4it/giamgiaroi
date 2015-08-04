@@ -1,5 +1,5 @@
 <template name="flipkart_product_detail">
-    {{#if subsReady}}
+    {{#if subsReady 'Flipkart_Product' 'Flipkart_Product_Price'}}
     <div class="row">
         <div class="col-md-12">
             <ol class="breadcrumb">
@@ -55,7 +55,7 @@
         </div>
     </div>
     {{else}}
-        {{> spinner}}
+        {{> product_loading}}
     {{/if}}
     <div class="row">
         <div class="col-md-12">
