@@ -29,6 +29,7 @@ Package.onUse(function (api) {
     api.use('dburles:collection-helpers', ['server']);
     api.use('underscore', ['client', 'server']);
     api.use('underscorestring:underscore.string', ['client', 'server']);
+    api.use('gadicohen:headers', ['client', 'server']);
 
     api.addFiles('private/flipkart.json', 'server', {isAsset: true});
 
@@ -55,6 +56,10 @@ Package.onUse(function (api) {
     api.addFiles('client/views/top_offers.html', ['client']);
     api.addFiles('client/views/top_offers.js', ['client']);
     api.addFiles('client/views/flipkart_offers.html', ['client']);
+    api.addFiles('client/views/recent_products.html', ['client']);
+    api.addFiles('client/views/recent_products.js', ['client']);
+
+    api.export('FlipkArt_Products',['server','client']);
 
 });
 

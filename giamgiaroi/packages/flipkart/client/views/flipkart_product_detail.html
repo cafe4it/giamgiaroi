@@ -1,95 +1,72 @@
 <template name="flipkart_product_detail">
-    {{#if subsReady 'Flipkart_Product' 'Flipkart_Product_Price'}}
-    <div class="row">
-        <div class="col-md-12">
-            <ol class="breadcrumb">
-                <li><a href="{{pathFor 'flipkart_home'}}">Flipkart</a></li>
-                <li class="active">{{product.title}}</li>
-            </ol>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-md-3">
-            <div class="pImgContainer2 text-center">
-                <img class="img-thumbnail" src="{{product.thumbnail}}" alt="{{product.title}}"/>
+    {{#if Template.subscriptionsReady}}
+        <div class="row">
+            <div class="col-md-12">
+                <ol class="breadcrumb">
+                    <li><a href="{{pathFor 'flipkart_home'}}">Flipkart</a></li>
+                    <li class="active">{{product.title}}</li>
+                </ol>
             </div>
         </div>
-        <div class="col-md-9">
-            <div class="row">
-                <div class="col-md-3">
-                    <select name="sltSeller" id="sltSeller" class="form-control">
-                        {{#each product.latest.sellers}}
-                        <option value="{{seller_id}}" {{selectedSeller isDefault}}>{{seller_name}}</option>
-                        {{/each}}
-                    </select>
-                </div>
-                <div class="col-md-2">
-                    <span id="currentPrice" class="form-control"><span class="text-success">Rs. {{formatIndiaCurrency currentPrice}}</span></span>
+        <div class="row">
+            <div class="col-md-3">
+                <div class="pImgContainer2 text-center">
+                    <img class="img-thumbnail" src="{{product.thumbnail}}" alt="{{product.title}}"/>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-md-12">
-                    <br/>
-                    <p class="text-danger"><i class="fa fa-info-circle"></i> Notify me if this product satisfies the following conditions</p>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="input-group input-group-md">
-                        <div class="input-group-addon">&lt;= </div>
-                        <span class="input-group-addon" id="sizing-addon3">Rs. </span>
-                        <input type="text" class="form-control" id="txtPrice" placeholder="{{formatIndiaCurrency currentPrice1}}"
-                               aria-describedby="sizing-addon3" value="{{formatIndiaCurrency currentPrice1}}">
+            <div class="col-md-9">
+                <div class="row">
+                    <div class="col-md-12">
+                        <p class="text-danger"><i class="fa fa-info-circle"></i> Notify me if this product satisfies the
+                            following conditions</p>
                     </div>
-                    <br/>
-
-                    <div class="input-group input-group-md">
-                        <span class="input-group-addon" id="sizing-addon3">@</span>
-                        <input type="text" class="form-control" id="txtEmail"
-                               value="{{currentUser.emails.[0].address}}">
-                    </div>
-                    <br/>
-                    <button class="btn btn-warning"><i class="fa fa-info-circle"></i> Notify me!</button>
                 </div>
+                <div class="row">
+                    <div class="col-md-3">
+                        <p>
+                            <select name="sltSeller" id="sltSeller" class="form-control">
+                                {{#each sellers}}
+                                    <option value="{{seller_id}}" {{selectedSeller isDefault}}>{{seller_name}}</option>
+                                {{/each}}
+                            </select>
+                        </p>
+                    </div>
+                    <div class="col-md-2">
+                        <span id="currentPrice" class="form-control"><span
+                                class="text-success">Rs. {{formatIndiaCurrency currentPrice}}</span></span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <p>
 
+                        <div class="input-group input-group-md">
+                            <div class="input-group-addon">&lt;=</div>
+                            <span class="input-group-addon" id="sizing-addon3">Rs. </span>
+                            <input type="text" class="form-control" id="txtPrice"
+                                   placeholder="{{formatIndiaCurrency currentPrice1}}"
+                                   aria-describedby="sizing-addon3" value="{{formatIndiaCurrency currentPrice1}}">
+                        </div>
+                        </p>
+                        <p>
+
+                        <div class="input-group input-group-md">
+                            <span class="input-group-addon" id="sizing-addon3">@</span>
+                            <input type="text" class="form-control" id="txtEmail"
+                                   value="{{currentUser.emails.[0].address}}">
+                        </div>
+                        </p>
+
+                        <p>
+                            <button class="btn btn-warning"><i class="fa fa-info-circle"></i> Notify me!</button>
+                        </p>
+                    </div>
+
+                </div>
             </div>
         </div>
-    </div>
     {{else}}
         {{> product_loading}}
     {{/if}}
-    <div class="row">
-        <div class="col-md-12">
-
-            <div class="findOnOther">
-
-                <!-- Nav tabs -->
-                <ul class="nav nav-tabs" role="tablist">
-                    <li role="presentation" class="active"><a href="#amazon" aria-controls="amazon" role="tab" data-toggle="tab"><i class="fa fa-search-plus"></i> Find on Amazon</a></li>
-                    <li role="presentation"><a href="#ebay" aria-controls="ebay" role="tab" data-toggle="tab"><i class="fa fa-search-plus"></i> Find on Ebay</a></li>
-                </ul>
-
-                <!-- Tab panes -->
-                <div class="tab-content">
-                    <div role="tabpanel" class="tab-pane active" id="amazon">
-                        <div class="row">
-                            <div class="col-md-12 col-lg-12">
-                                <div class="input-group">
-                                    <input type="text" class="form-control" placeholder="Search for..." value="{{product.originalTitle}}">
-                                  <span class="input-group-btn">
-                                    <button class="btn btn-info" type="button">Search</button>
-                                     </span>
-                                </div><!-- /input-group -->
-                            </div><!-- /.col-lg-6 -->
-                        </div>
-                    </div>
-                    <div role="tabpanel" class="tab-pane" id="ebay">
-
-                    </div>
-                </div>
-
-            </div>
-            <!-- /input-group -->
-        </div>
-    </div>
+    {{> flipkart_recent_products}}
 </template>

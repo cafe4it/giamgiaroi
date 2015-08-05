@@ -124,7 +124,8 @@ if (Meteor.isServer) {
                     },
                     sellertables : String
                 });
-                var p = FlipkArt_Products.findOne({productId: product.pid});
+                var p = FlipkArt_Products.findOne({productId: product.pid}),
+                    productLinkDetail = '';
                 if (!p) {
                     var slug = s.slugify(product.title),
                         updatedAt = new Date;
@@ -171,10 +172,12 @@ if (Meteor.isServer) {
                             updatedAt: updatedAt
                         }
                     });
-                    return product_detail_link(product.pid, slug);
+                    productLinkDetail = product_detail_link(product.pid, slug);
                 } else {
-                    return product_detail_link(p.productId, p.slug);
+                    productLinkDetail = product_detail_link(p.productId, p.slug);
                 }
+                Meteor.call('FlipkArt_addRecentProduct', product.pid);
+                return productLinkDetail;
             } catch (ex) {
                 console.log(ex)
             }
@@ -187,6 +190,33 @@ if (Meteor.isServer) {
                 return productDetail;
             }
             return {};
+        },
+        FlipkArt_addRecentProduct : function(productId){
+            check(productId, String);
+            var clientAddress = this.connection.clientAddress,
+                userId = this.userId || '',
+                isExists = undefined;
+            if(_.isEmpty(userId)){
+                isExists = FlipkArt_Products_Recent.findOne({productId : productId, clientAddress : clientAddress});
+
+            }else{
+                isExists = FlipkArt_Products_Recent.findOne({productId : productId, userId : userId});
+            }
+
+            if(isExists){
+                FlipkArt_Products_Recent.update({_id : isExists._id},{
+                    $set : {
+                        updatedAt : new Date
+                    }
+                });
+            }else{
+                FlipkArt_Products_Recent.insert({
+                    productId : productId,
+                    clientAddress : clientAddress,
+                    userId : userId,
+                    updatedAt : new Date
+                });
+            }
         }
     })
 }

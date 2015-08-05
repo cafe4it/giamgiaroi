@@ -56,3 +56,63 @@
 .deals-of-day-title{
     margin-top: 10px !important;
 }
+
+.margin-bottom-10 {
+    margin-bottom: 10px;
+}
+
+.margin-bottom-20 {
+    margin-bottom: 20px;
+}
+
+.recent-products {
+    margin-top: 20px;
+}
+
+.recent-products a{
+    text-decoration: none;
+}
+
+.recent-productImgContainer{
+    height: 200px;
+    width: 200px;
+    line-height: 200px;
+    padding-top: 10px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.recent-productImgContainer img {
+    vertical-align: middle;
+    max-width: 150px;
+    max-height: 150px;
+}
+
+.recent-product-title{
+    overflow: hidden;
+    margin-top: 10px !important;
+}
+
+.carousel-control 			 { width:  4%; }
+.carousel-control.left,.carousel-control.right {margin-left:15px;background-image:none;}
+@media (max-width: 767px) {
+    .carousel-inner .active.left { left: -100%; }
+    .carousel-inner .next        { left:  100%; }
+    .carousel-inner .prev		 { left: -100%; }
+    .active > div { display:none; }
+    .active > div:first-child { display:block; }
+
+}
+@media (min-width: 767px) and (max-width: 992px ) {
+    .carousel-inner .active.left { left: -50%; }
+    .carousel-inner .next        { left:  50%; }
+    .carousel-inner .prev		 { left: -50%; }
+    .active > div { display:none; }
+    .active > div:first-child { display:block; }
+    .active > div:first-child + div { display:block; }
+}
+@media (min-width: 992px ) {
+    .carousel-inner .active.left { left: -25%; }
+    .carousel-inner .next        { left:  25%; }
+    .carousel-inner .prev		 { left: -25%; }
+}
