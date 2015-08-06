@@ -68,8 +68,7 @@ if(Meteor.isServer){
             }catch(ex){
                 console.error('Error while rending template, ', ex);
             }
-            console.log(result.html)
-            return result.html;
+            return result.data.html;
         };
 
         console.log('----------Setup Meteor Email-----------')
