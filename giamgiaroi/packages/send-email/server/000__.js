@@ -31,14 +31,14 @@ if(Meteor.isServer){
     }
 
     var setupMeteorEmailConfig = function(){
-        Accounts.config({
+/*        Accounts.config({
             sendVerificationEmail : true
-        })
+        })*/
         Accounts.emailTemplates.headers = {
             'X-MC-AutoText': true
         };
         Accounts.emailTemplates.from = 'PriceBuddy <no-reply@pricebuddy.xyz>';
-        Accounts.emailTemplates.siteName = 'Price Buddy';
+        Accounts.emailTemplates.siteName = 'PriceBuddy';
         Accounts.emailTemplates.verifyEmail.subject = function(user) {
             return 'Welcome to PriceBuddy!';
         };
@@ -68,7 +68,10 @@ if(Meteor.isServer){
             }catch(ex){
                 console.error('Error while rending template, ', ex);
             }
+            console.log(result.html)
             return result.html;
         };
+
+        console.log('----------Setup Meteor Email-----------')
     }
 }

@@ -12,11 +12,11 @@ Package.describe({
 
 Package.onUse(function(api) {
   api.versionsFrom('1.1.0.3');
-  api.use('wylio:mandrill',['server']);
   api.use('accounts-base',['server']);
   api.use('accounts-password',['server']);
+  api.use('wylio:mandrill',['server']);
 
-  api.addFiles('private/smtp.json', 'server', {isAsset: true});
+  api.addFiles('private/smtp.json', ['server'], {isAsset: true});
 
-  api.addFiles('server/000__.js', 'server');
+  api.addFiles('server/000__.js', ['server']);
 });
