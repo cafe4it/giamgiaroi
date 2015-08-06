@@ -21,11 +21,6 @@ flipkartRoutes.route('/offers', {
 
 flipkartRoutes.route('/:productId/:slug', {
     name: 'flipkart_product_detail',
-/*    subscriptions: function (p, q) {
-        var params = {productId: p.productId, slug: p.slug};
-        this.register('Flipkart_Product', Meteor.subscribe('Flipkart_Product_By', params));
-        this.register('Flipkart_Product_Price', Meteor.subscribe('Flipkart_Product_Price', p.productId));
-    },*/
     action: function (p, q) {
         BlazeLayout.render('defaultLayout', {top: 'header', main: 'flipkart_product_detail'})
     }

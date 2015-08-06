@@ -2,7 +2,7 @@
   // Server authentication info
   "servers": [
     {
-      "host": "pricebuddy",
+      "host": "153.92.41.6",
       "username": "root",
       "password": "ZTMxMDg5YzA4"
       // or pem file (ssh based authentication)

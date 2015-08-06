@@ -15,7 +15,7 @@ blaze@2.1.2
 blaze-tools@1.0.3
 boilerplate-generator@1.0.3
 cafe4it:flipkart@0.0.1
-cafe4it:node-ses@0.0.2
+cafe4it:send-email@0.0.1
 callback-hook@1.0.3
 cfs:http-methods@0.0.29
 check@1.0.5
@@ -60,6 +60,8 @@ meteorhacks:subs-manager@1.5.2
 meteorspark:util@0.2.0
 minifiers@1.1.5
 minimongo@1.0.8
+mizzao:timesync@0.3.3
+mizzao:user-status@0.6.5
 mobile-status-bar@1.0.3
 mongo@1.1.0
 mongo-livedata@1.0.8
@@ -97,4 +99,5 @@ underscorestring:underscore.string@3.1.1
 url@1.0.4
 webapp@1.2.0
 webapp-hashing@1.0.3
+wylio:mandrill@1.0.1
 zimme:active-route@2.3.0

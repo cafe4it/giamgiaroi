@@ -32,6 +32,9 @@ arillo:flow-router-helpers@0.4.1
 zimme:active-route
 deanius:promise@2.2.1
 percolate:synced-cron
-cafe4it:node-ses
 sacha:spin@2.0.4
 gadicohen:headers
+email
+mizzao:user-status
+wylio:mandrill
+cafe4it:send-email

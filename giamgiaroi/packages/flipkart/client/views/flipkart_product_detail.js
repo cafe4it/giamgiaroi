@@ -35,17 +35,7 @@ Template.flipkart_product_detail.helpers({
     currentPrice1: function () {
         return Template.instance().currentPrice.get() - 1;
     }
-})
-
-Template.flipkart_product_detail.rendered = function () {
-    $(document).ready(function () {
-
-        //$('input#txtPrice').autoNumeric('init');
-        /*if(Template.instance().currentPrice.get()){
-         $('#txtPrice').val(reformatPrice(Template.instance().currentPrice.get() - 1));
-         }*/
-    })
-}
+});
 
 Template.flipkart_product_detail.events({
     'change #sltSeller': function (e, t) {

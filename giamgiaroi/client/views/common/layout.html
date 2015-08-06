@@ -1,6 +1,9 @@
 <template name="defaultLayout">
     <div class="container">
         {{> Template.dynamic template=top}}
+        {{#if currentUser.isNotYetVerifyEmail}}
+            {{> verify_notification}}
+        {{/if}}
         {{> Template.dynamic template=main}}
     </div>
 </template>
