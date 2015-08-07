@@ -57,7 +57,7 @@ var getProductInfo = function() {
         title = (subtitle === '' || title.lastIndexOf(subtitle) !== -1) ? title : title + ' ' + subtitle,
         price = $('.shop-section span.selling-price.omniture-field').text(),
         maxPrice = $('.shop-section span.price').text() || price,
-        thumb = $('.productImages div.imgWrapper img.productImage.current').attr('src') || '',
+        thumb = $('.productImages div.imgWrapper img.productImage').first().attr('src') || '',
         pathName = window.location.pathname,
         seller = {
             id : $('.seller-badge-wrap .seller-name').attr('href'),

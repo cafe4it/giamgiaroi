@@ -20,6 +20,7 @@ var productInfo = undefined;
 var isShowPageAction = false;
 chrome.runtime.onMessage.addListener(function (msg, sender, cb) {
     /* First, validate the message's structure */
+    //chrome.pageAction.hide(sender.tab.id);
     if ((msg.from === 'content') && (msg.subject === 'showPageAction')) {
         isShowPageAction = true;
         if (ddpConnection === undefined && window.ddpConnection === undefined) {
@@ -30,13 +31,15 @@ chrome.runtime.onMessage.addListener(function (msg, sender, cb) {
             var rs = ddpConnection.call('Extension_initProduct', msg.product);
             rs.result.then(function (productDetailLink) {
                 cb(productDetailLink);
+                chrome.pageAction.show(sender.tab.id);
+                console.log('-------show Page Action--------')
             });
             return true;
         }
     }
 });
 
-var i = 1;
+/*var i = 1;
 var rule1 = {
     conditions: [
         new chrome.declarativeContent.PageStateMatcher({
@@ -50,7 +53,7 @@ chrome.runtime.onInstalled.addListener(function (details) {
     chrome.declarativeContent.onPageChanged.removeRules(undefined, function () {
         chrome.declarativeContent.onPageChanged.addRules([rule1]);
     });
-});
+});*/
 
 
 

@@ -8,21 +8,21 @@ flipkartRoutes.route('/', {
         this.register('Flipkart_Products', Meteor.subscribe('Flipkart_Products'));
     },
     action: function (p, q) {
-        BlazeLayout.render('defaultLayout', {top: 'header', main: 'flipkart_home'})
+        BlazeLayout.render('defaultLayout', {top: 'header', main: 'flipkart_home', bottom : 'footer'})
     }
 });
 
 flipkartRoutes.route('/offers', {
     name: 'flipkart_offers',
     action: function (p, q) {
-        BlazeLayout.render('defaultLayout', {top: 'header', main: 'flipkart_offers'})
+        BlazeLayout.render('defaultLayout', {top: 'header', main: 'flipkart_offers', bottom : 'footer'})
     }
 })
 
 flipkartRoutes.route('/:productId/:slug', {
     name: 'flipkart_product_detail',
     action: function (p, q) {
-        BlazeLayout.render('defaultLayout', {top: 'header', main: 'flipkart_product_detail'})
+        BlazeLayout.render('defaultLayout', {top: 'header', main: 'flipkart_product_detail', bottom : 'footer'})
     }
 });
 
@@ -34,6 +34,6 @@ flipkartRoutes.route('/:productId', {
         this.register('Flipkart_Product_Price', Meteor.subscribe('Flipkart_Product_Price', p.productId));
     },
     action: function (p, q) {
-        BlazeLayout.render('defaultLayout', {top: 'header', main: 'flipkart_product_detail'})
+        BlazeLayout.render('defaultLayout', {top: 'header', main: 'flipkart_product_detail', bottom : 'footer'})
     }
 })

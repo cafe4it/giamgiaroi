@@ -7,7 +7,7 @@ Template.flipkart_product_detail.onCreated(function () {
     self.autorun(function (c) {
         var productId = FlowRouter.getParam('productId'),
             slug = FlowRouter.getParam('slug'),
-            params = {productId: productId, slug: slug};
+            params = (slug) ? {productId: productId, slug: slug} : {productId: productId};
         var productSubs = self.subscribe('Flipkart_Product_By', params),
             pricesSubs = self.subscribe('Flipkart_Product_Price', productId);
         if (productSubs.ready() && pricesSubs.ready()) {
@@ -17,7 +17,7 @@ Template.flipkart_product_detail.onCreated(function () {
             self.sellers.set(product.sellers());
         }
     })
-})
+});
 
 Template.flipkart_product_detail.helpers({
     product: function () {

@@ -82,6 +82,20 @@
     position: relative;
 }
 
+.recent-product-listImgContainer{
+    height: 100px;
+    width: 100px;
+    line-height: 100px;
+    margin: 0 5px;
+    position: relative;
+}
+
+.recent-product-listImgContainer img{
+    vertical-align: middle;
+    max-width: 80px;
+    max-height: 80px;
+}
+
 .recent-productImgContainer img {
     vertical-align: middle;
     max-width: 150px;

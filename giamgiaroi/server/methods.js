@@ -18,8 +18,8 @@ if (Meteor.isServer) {
                 return 'fail';
             }
         },
-        createTemporaryUserIfNotExists : function(email){
-
+        RootUrl : function(){
+            return process.env.IP_SERVER || process.env.ROOT_URL;
         }
     })
 }

@@ -57,7 +57,9 @@ Package.onUse(function (api) {
     api.addFiles('client/views/top_offers.js', ['client']);
     api.addFiles('client/views/flipkart_offers.html', ['client']);
     api.addFiles('client/views/recent_products.html', ['client']);
+    api.addFiles('client/views/recent_products2.html', ['client']);
     api.addFiles('client/views/recent_products.js', ['client']);
+    api.addFiles('client/views/recent_products2.js', ['client']);
 
     api.export('FlipkArt_Products',['server','client']);
 

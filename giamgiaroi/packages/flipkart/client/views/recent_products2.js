@@ -1,4 +1,7 @@
-Template.flipkart_recent_products.onCreated(function () {
+/**
+ * Created by nxcong on 07/08/2015.
+ */
+Template.flipkart_recent_products2.onCreated(function () {
     var self = this;
 
     self.products = new ReactiveVar([])
@@ -30,9 +33,6 @@ Template.flipkart_recent_products.onCreated(function () {
                         return _.findWhere(productsRecent, {productId: pId});
                     });
                     self.products.set(tmp);
-                    if (_.size(self.products.get()) > 4) {
-                        initCarousel();
-                    }
                 }
             }
         }
@@ -40,7 +40,7 @@ Template.flipkart_recent_products.onCreated(function () {
 
 });
 
-Template.flipkart_recent_products.helpers({
+Template.flipkart_recent_products2.helpers({
     hasRecent: function () {
         return _.size(Template.instance().products.get()) > 0;
     },
@@ -52,8 +52,8 @@ Template.flipkart_recent_products.helpers({
     }
 });
 
-Template.flipkart_recent_products.events({
-    'click [id^="recentProductId_"]': function (e, t) {
+Template.flipkart_recent_products2.events({
+    'click [class^="ProductId_"]': function (e, t) {
         e.preventDefault();
         if (e.currentTarget) {
             var productId = $('[id=' + e.currentTarget.id + ']').attr('data-id');
@@ -66,25 +66,3 @@ Template.flipkart_recent_products.events({
         }
     }
 })
-
-function initCarousel() {
-    setTimeout(function () {
-        $('#recentProductItems .item').first().addClass('active');
-        $('#recentProductItems.carousel[data-type="multi"] .item').each(function () {
-            var next = $(this).next();
-            if (!next.length) {
-                next = $(this).siblings(':first');
-            }
-            next.children(':first-child').clone().appendTo($(this));
-
-            for (var i = 0; i < 2; i++) {
-                next = next.next();
-                if (!next.length) {
-                    next = $(this).siblings(':first');
-                }
-
-                next.children(':first-child').clone().appendTo($(this));
-            }
-        });
-    }, 100)
-}

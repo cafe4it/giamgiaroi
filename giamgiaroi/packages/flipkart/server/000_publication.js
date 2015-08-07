@@ -13,12 +13,12 @@ if(Meteor.isServer){
     });
 
     Meteor.publish('Flipkart_Product_By',function(params){
-        Meteor._sleepForMs(200);
+        Meteor._sleepForMs(100);
         return FlipkArt_Products.find(params);
     });
 
     Meteor.publish('Flipkart_Product_Price',function(productId){
-        Meteor._sleepForMs(200);
+        Meteor._sleepForMs(100);
         return FlipkArt_Products_Prices.find({productId : productId},{sort : {updatedAt : -1},limit : 1});
     });
 
