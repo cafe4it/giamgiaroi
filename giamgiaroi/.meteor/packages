@@ -19,7 +19,6 @@ ian:accounts-ui-bootstrap-3
 accounts-facebook
 accounts-twitter
 accounts-google
-cafe4it:flipkart
 random
 ongoworks:security
 underscorestring:underscore.string
@@ -37,5 +36,7 @@ gadicohen:headers
 email
 mizzao:user-status
 wylio:mandrill
-cafe4it:send-email
 meteorhacks:cluster
+pricebuddy:flipkart
+pricebuddy:search-module
+pricebuddy:send-email

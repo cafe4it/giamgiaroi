@@ -23,12 +23,12 @@ if(Meteor.isServer){
     });
 
     Meteor.publish('FlipkArt_Offers',function(type){
-        Meteor._sleepForMs(500);
+        //Meteor._sleepForMs(500);
         return FlipkArt_Offers.find({type : type});
     })
 
     Meteor.publish('FlipkArt_Offers_hasLimit',function(type,limit){
-        Meteor._sleepForMs(500);
+        //Meteor._sleepForMs(500);
         return FlipkArt_Offers.find({type : type}, {limit : limit});
     });
 

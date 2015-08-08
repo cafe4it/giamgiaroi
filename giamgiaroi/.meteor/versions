@@ -14,8 +14,6 @@ binary-heap@1.0.3
 blaze@2.1.2
 blaze-tools@1.0.3
 boilerplate-generator@1.0.3
-cafe4it:flipkart@0.0.1
-cafe4it:send-email@0.0.1
 callback-hook@1.0.3
 cfs:http-methods@0.0.29
 check@1.0.5
@@ -74,6 +72,9 @@ observe-sequence@1.0.6
 ongoworks:security@1.2.0
 ordered-dict@1.0.3
 percolate:synced-cron@1.2.1
+pricebuddy:flipkart@0.0.1
+pricebuddy:search-module@0.0.1
+pricebuddy:send-email@0.0.1
 raix:eventemitter@0.1.3
 random@1.0.3
 reactive-dict@1.1.0

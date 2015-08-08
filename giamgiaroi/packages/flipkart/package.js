@@ -1,5 +1,5 @@
 Package.describe({
-    name: 'cafe4it:flipkart',
+    name: 'pricebuddy:flipkart',
     version: '0.0.1',
     // Brief, one-line summary of the package.
     summary: 'Price Tracker for Flipkart',
