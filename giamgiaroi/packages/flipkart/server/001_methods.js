@@ -107,6 +107,18 @@ if (Meteor.isServer) {
                 data : []
             }
         },
+        FlipkArt_addProductFromUrl : function(info){
+            check(info,{
+                pid : String,
+                url : String
+            });
+
+            var p = FlipkArt_Products.find({productId : info.pid});
+            if(!p){
+
+            }
+            return p;
+        },
         Extension_initProduct: function (product) {
             try {
                 check(product, {
@@ -223,4 +235,70 @@ if (Meteor.isServer) {
 
 function priceToNumber(price){
     return parseFloat(price.toString().replace(/,/g, ''))
+}
+
+function AddOrUpdateProduct(product){
+    check(product, {
+        pid: String,
+        title: String,
+        originalTitle : String,
+        description: String,
+        price: String,
+        maxPrice: String,
+        thumbnail: String,
+        pathName: String,
+        seller : {
+            id : String,
+            name : String
+        },
+        sellertables : String
+    });
+    var p = FlipkArt_Products.findOne({productId : product.pid});
+    if(!p){
+        var slug = s.slugify(product.title),
+            updatedAt = new Date;
+        var pid = FlipkArt_Products.insert({
+            productId: product.pid,
+            title: product.title,
+            originalTitle: product.originalTitle,
+            slug: slug,
+            path: product.pathName,
+            description: product.description,
+            thumbnail: product.thumbnail,
+            updatedAt: updatedAt
+        });
+        var price = (s.startsWith(product.price, 'Rs.')) ? s.strRight(product.price, 'Rs.').trim() : product.price,
+            maxPrice = (s.startsWith(product.maxPrice, 'Rs.')) ? s.strRight(product.maxPrice, 'Rs.').trim() : product.maxPrice;
+        var sellers = [];
+        if(product.sellertables === ''){
+            var oneSeller = {
+                seller_id : product.seller.id,
+                seller_name : product.seller.name,
+                price : priceToNumber(price),
+                max_price : priceToNumber(maxPrice),
+                isDefault : true
+            }
+            sellers.push(oneSeller);
+        }else{
+            var sellertables = JSON.parse(product.sellertables);
+            if(_.has(sellertables,'dataModel')){
+                sellers = _.map(sellertables.dataModel,function(seller){
+                    return {
+                        seller_id : seller.sellerInfo.link,
+                        seller_name : seller.sellerInfo.name,
+                        price : priceToNumber(seller.priceInfo.sellingPrice),
+                        max_price : priceToNumber(seller.priceInfo.price),
+                        isDefault : (seller.sellerInfo.link === product.seller.id)
+                    }
+                })
+            }
+        }
+        FlipkArt_Products_Prices.upsert({productId: product.pid}, {
+            $set: {
+                productId: product.pid,
+                sellers : sellers,
+                updatedAt: updatedAt
+            }
+        });
+    }
 }

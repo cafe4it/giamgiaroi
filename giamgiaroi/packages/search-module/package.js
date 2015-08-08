@@ -28,8 +28,12 @@ Package.onUse(function (api) {
     api.use('pricebuddy:flipkart', ['client', 'server']);
 
     api.addFiles('server/000__.js',['server']);
+    api.addFiles('lib/URI.js',['server','client']);
+    api.addFiles('lib/helper.js',['server','client']);
     api.addFiles('server/001_methods.js',['server']);
 
     api.addFiles('client/views/search_widget.html',['client']);
     api.addFiles('client/views/search_widget.js',['client']);
+
+    api.export('SearchWidget',['server','client']);
 });

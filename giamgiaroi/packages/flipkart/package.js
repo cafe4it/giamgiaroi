@@ -16,6 +16,7 @@ Package.onUse(function (api) {
     api.use('meteorhacks:async', ['server']);
     api.use('ongoworks:security', ['server']);
     api.use('percolate:synced-cron', ['server']);
+    api.use('cafe4it:xray', ['server']);
     api.use('http', ['server']);
     api.use('templating', ['client']);
     api.use('sacha:spin', ['client']);
@@ -36,10 +37,10 @@ Package.onUse(function (api) {
     api.addFiles('server/000___.js', ['server']);
     api.addFiles('server/000__startup.js', ['server']);
     api.addFiles('server/000_helpers.js', ['server']);
+    api.addFiles('lib/schemas.js', ['server','client']);
     api.addFiles('server/000_publication.js', ['server']);
     api.addFiles('lib/routes.js', ['server','client']);
     api.addFiles('server/001_methods.js', ['server']);
-    api.addFiles('lib/schemas.js', ['server','client']);
     api.addFiles('server/000_security.js', ['server']);
     api.addFiles('server/002_cron.js', ['server']);
 
