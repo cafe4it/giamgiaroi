@@ -2,12 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8378ae5c-5b16-4b51-bc89-f066773fdf0a" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../giamgiaroi/packages/flipkart/server/001_methods.js" afterPath="$PROJECT_DIR$/../giamgiaroi/packages/flipkart/server/001_methods.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../giamgiaroi/client/views/home/home.html" afterPath="$PROJECT_DIR$/../giamgiaroi/client/views/home/home.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../giamgiaroi/packages/flipkart/package.js" afterPath="$PROJECT_DIR$/../giamgiaroi/packages/flipkart/package.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../giamgiaroi/packages/search-module/package.js" afterPath="$PROJECT_DIR$/../giamgiaroi/packages/search-module/package.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../giamgiaroi/packages/search-module/client/views/search_widget.html" afterPath="$PROJECT_DIR$/../giamgiaroi/packages/search-module/client/views/search_widget.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../giamgiaroi/packages/search-module/client/views/search_widget.js" afterPath="$PROJECT_DIR$/../giamgiaroi/packages/search-module/client/views/search_widget.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../giamgiaroi/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../giamgiaroi/.idea/workspace.xml" />
     </list>

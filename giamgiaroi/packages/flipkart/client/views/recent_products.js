@@ -77,7 +77,7 @@ function initCarousel() {
             }
             next.children(':first-child').clone().appendTo($(this));
 
-            for (var i = 0; i < 2; i++) {
+            for (var i = 0; i < 5; i++) {
                 next = next.next();
                 if (!next.length) {
                     next = $(this).siblings(':first');

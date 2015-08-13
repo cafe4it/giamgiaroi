@@ -1,0 +1,36 @@
+{
+  "dependencies": {
+    "osmosis": {
+      "version": "0.0.8",
+      "dependencies": {
+        "needle": {
+          "version": "0.10.0",
+          "dependencies": {
+            "debug": {
+              "version": "2.2.0",
+              "dependencies": {
+                "ms": {
+                  "version": "0.7.1"
+                }
+              }
+            },
+            "iconv-lite": {
+              "version": "0.4.11"
+            }
+          }
+        },
+        "libxmljs": {
+          "version": "0.14.2",
+          "dependencies": {
+            "bindings": {
+              "version": "1.2.1"
+            },
+            "nan": {
+              "version": "1.8.4"
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -74,6 +74,9 @@ ongoworks:security@1.2.0
 ordered-dict@1.0.3
 percolate:synced-cron@1.2.1
 pricebuddy:flipkart@0.0.1
+pricebuddy:lazada@0.0.1
+pricebuddy:node-scrapy@0.0.1
+pricebuddy:osmosis@0.0.1
 pricebuddy:search-module@0.0.1
 pricebuddy:send-email@0.0.1
 raix:eventemitter@0.1.3
